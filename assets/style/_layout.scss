@@ -200,30 +200,23 @@ body {
           height: auto;
         }
       }
-      .skill {
-        margin: 50px 0 50px;
+      div.skill {
+        margin: 40px 0;
         h6 {
           font-weight: bold;
         }
-        span i {
-          display: inline-block;
-          margin-bottom: 5px;
-        }
-      }
-      .call-to-action {
-        a {
-          display: block;
-          text-decoration: none;
-        }
-        a:hover i.fab.fa-whatsapp,
-        i.fab.fa-whatsapp:hover {
-          color: #25d366;
+        span {
+          i {
+            display: inline-block;
+            margin-bottom: 5px;
+          }
         }
       }
       .social-media {
         a {
+          margin-bottom: 5px;
+          margin-right: 5px;
           text-decoration: none;
-          margin-right: 10px;
           i {
             background-color: $gray-2;
             border-radius: 10px;
@@ -234,6 +227,9 @@ body {
           &:hover {
             i {
               color: $white;
+            }
+            .fab.fa-whatsapp {
+              background: #4fce5d;
             }
             .fab.fa-facebook {
               background: $white;
@@ -445,12 +441,6 @@ body {
       .close-button {
         @include translate(250px, 70px);
       }
-      .call-to-action {
-        width: 50%;
-      }
-      .social-media {
-        width: 50%;
-      }
     }
   }
 }
@@ -479,12 +469,6 @@ body {
       }
       .close-button {
         @include translate(175px, 70px);
-      }
-      .call-to-action {
-        width: 50%;
-      }
-      .social-media {
-        width: 50%;
       }
     }
   }
@@ -516,14 +500,6 @@ body {
         left: 80%;
         @include translate(0, 70px);
       }
-      .call-to-action {
-        width: 100%;
-        margin-bottom: 5px;
-      }
-      .social-media {
-        width: 100%;
-        padding-left: 5px;
-      }
     }
   }
 }
@@ -532,20 +508,12 @@ body {
   body {
     header {
       .about-profile {
-        .skill {
-          margin: 0;
+        div.skill {
+          margin: 5px 0;
           text-align: center;
         }
         .close-button {
           @include translate(25px, 60px);
-        }
-        .call-to-action {
-          width: 50%;
-          margin-bottom: 5px;
-        }
-        .social-media {
-          padding-left: 40px;
-          width: 50%;
         }
       }
     }
@@ -556,52 +524,19 @@ body {
     header {
       height: 100vh;
       .about-profile {
-        height: 90%;
+        height: 94%;
         .me {
           width: 70%;
         }
         .img-profile {
           width: 15%;
         }
-        .skill {
-          margin: 0;
-          text-align: center;
-          h5 {
-            display: none;
-          }
-        }
-        .close-button {
-          @include translate(0, 25px);
-        }
-        .call-to-action {
-          width: 50%;
-          margin-bottom: 5px;
-        }
-        .social-media {
-          padding-left: 40px;
-          width: 50%;
-        }
-      }
-    }
-  }
-}
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
-  body {
-    header {
-      .about-profile {
-        .skill {
+        div.skill {
           margin: 0;
           text-align: center;
         }
         .close-button {
-          @include translate(150px, 60px);
-        }
-        .call-to-action {
-          width: 50%;
-          margin-bottom: 5px;
-        }
-        .social-media {
-          width: 50%;
+          @include translate(0, 0);
         }
       }
     }
@@ -610,20 +545,14 @@ body {
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) {
   body {
     header {
+      height: 100vh;
       .about-profile {
-        .skill {
-          margin: 0;
+        div.skill {
+          margin: 5px 0;
           text-align: center;
         }
         .close-button {
           @include translate(0, 25px);
-        }
-        .call-to-action {
-          width: 50%;
-          margin-bottom: 5px;
-        }
-        .social-media {
-          width: 50%;
         }
       }
     }
@@ -632,26 +561,20 @@ body {
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: landscape) {
   body {
     header {
+      height: 100vh;
       .about-profile {
-        .skill {
+        div.skill {
           margin: 15px 0;
           text-align: center;
         }
         .close-button {
           @include translate(0, 25px);
         }
-        .call-to-action {
-          width: 50%;
-          margin-bottom: 5px;
-        }
-        .social-media {
-          width: 50%;
-        }
       }
     }
   }
 }
-@media only screen and (max-width: 640px) and (min-width: 360px) and (orientation: portrait) {
+@media only screen and (min-height: 640px) and (min-width: 360px) and (orientation: portrait) {
   body {
     header {
       height: 100vh;
@@ -666,10 +589,7 @@ body {
           text-align: center;
         }
         .close-button {
-          @include translate(150px, 60px);
-        }
-        .call-to-action {
-          margin-bottom: 5px;
+          @include translate(160px, 75px);
         }
       }
     }
@@ -680,20 +600,18 @@ body {
     header {
       height: 100vh;
       .about-profile {
+        top: 45%;
         .img-profile {
           figure {
             @include translate(0, 0);
           }
         }
-        .skill {
+        div.skill {
           margin: 5px 0;
           text-align: center;
         }
         .close-button {
-          @include translate(0, 25px);
-        }
-        .call-to-action {
-          margin-bottom: 5px;
+          @include translate(0, 30px);
         }
       }
     }
@@ -709,19 +627,12 @@ body {
             @include translate(0, 0);
           }
         }
-        .skill {
-          margin: 5px 0;
+        div.skill {
+          margin: 10px 0;
           text-align: center;
         }
         .close-button {
           @include translate(0, 25px);
-        }
-        .call-to-action {
-          width: 50%;
-          margin-bottom: 5px;
-        }
-        .social-media {
-          width: 50%;
         }
       }
     }
@@ -743,14 +654,6 @@ body {
         }
         .close-button {
           @include translate(0, 25px);
-        }
-        .call-to-action {
-          width: 50%;
-          margin-bottom: 5px;
-          padding-left: 2px;
-        }
-        .social-media {
-          width: 50%;
         }
       }
     }

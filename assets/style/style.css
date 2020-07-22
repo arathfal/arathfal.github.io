@@ -213,27 +213,20 @@ body header .about-profile .img-profile img {
   width: 100%;
   height: auto;
 }
-body header .about-profile .skill {
-  margin: 50px 0 50px;
+body header .about-profile div.skill {
+  margin: 40px 0;
 }
-body header .about-profile .skill h6 {
+body header .about-profile div.skill h6 {
   font-weight: bold;
 }
-body header .about-profile .skill span i {
+body header .about-profile div.skill span i {
   display: inline-block;
   margin-bottom: 5px;
 }
-body header .about-profile .call-to-action a {
-  display: block;
-  text-decoration: none;
-}
-body header .about-profile .call-to-action a:hover i.fab.fa-whatsapp,
-body header .about-profile .call-to-action i.fab.fa-whatsapp:hover {
-  color: #25d366;
-}
 body header .about-profile .social-media a {
+  margin-bottom: 5px;
+  margin-right: 5px;
   text-decoration: none;
-  margin-right: 10px;
 }
 body header .about-profile .social-media a i {
   background-color: #a3a3a3;
@@ -244,6 +237,9 @@ body header .about-profile .social-media a i {
 }
 body header .about-profile .social-media a:hover i {
   color: #fff;
+}
+body header .about-profile .social-media a:hover .fab.fa-whatsapp {
+  background: #4fce5d;
 }
 body header .about-profile .social-media a:hover .fab.fa-facebook {
   background: #fff;
@@ -410,12 +406,6 @@ body header .arrow-right {
     -webkit-transform: translate(250px, 70px);
     transform: translate(250px, 70px);
   }
-  body .about-profile .call-to-action {
-    width: 50%;
-  }
-  body .about-profile .social-media {
-    width: 50%;
-  }
 }
 @media only screen and (min-width: 357px) and (max-width: 515px) {
   body header .arrow-left,
@@ -441,12 +431,6 @@ body header .arrow-right {
   body .about-profile .close-button {
     -webkit-transform: translate(175px, 70px);
     transform: translate(175px, 70px);
-  }
-  body .about-profile .call-to-action {
-    width: 50%;
-  }
-  body .about-profile .social-media {
-    width: 50%;
   }
 }
 @media only screen and (max-width: 356px) {
@@ -475,31 +459,15 @@ body header .arrow-right {
     -webkit-transform: translate(0, 70px);
     transform: translate(0, 70px);
   }
-  body .about-profile .call-to-action {
-    width: 100%;
-    margin-bottom: 5px;
-  }
-  body .about-profile .social-media {
-    width: 100%;
-    padding-left: 5px;
-  }
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
-  body header .about-profile .skill {
-    margin: 0;
+  body header .about-profile div.skill {
+    margin: 5px 0;
     text-align: center;
   }
   body header .about-profile .close-button {
     -webkit-transform: translate(25px, 60px);
     transform: translate(25px, 60px);
-  }
-  body header .about-profile .call-to-action {
-    width: 50%;
-    margin-bottom: 5px;
-  }
-  body header .about-profile .social-media {
-    padding-left: 40px;
-    width: 50%;
   }
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) {
@@ -507,7 +475,7 @@ body header .arrow-right {
     height: 100vh;
   }
   body header .about-profile {
-    height: 90%;
+    height: 94%;
   }
   body header .about-profile .me {
     width: 70%;
@@ -515,62 +483,33 @@ body header .arrow-right {
   body header .about-profile .img-profile {
     width: 15%;
   }
-  body header .about-profile .skill {
-    margin: 0;
-    text-align: center;
-  }
-  body header .about-profile .skill h5 {
-    display: none;
-  }
-  body header .about-profile .close-button {
-    -webkit-transform: translate(0, 25px);
-    transform: translate(0, 25px);
-  }
-  body header .about-profile .call-to-action {
-    width: 50%;
-    margin-bottom: 5px;
-  }
-  body header .about-profile .social-media {
-    padding-left: 40px;
-    width: 50%;
-  }
-}
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
-  body header .about-profile .skill {
+  body header .about-profile div.skill {
     margin: 0;
     text-align: center;
   }
   body header .about-profile .close-button {
-    -webkit-transform: translate(150px, 60px);
-    transform: translate(150px, 60px);
-  }
-  body header .about-profile .call-to-action {
-    width: 50%;
-    margin-bottom: 5px;
-  }
-  body header .about-profile .social-media {
-    width: 50%;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
   }
 }
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) {
-  body header .about-profile .skill {
-    margin: 0;
+  body header {
+    height: 100vh;
+  }
+  body header .about-profile div.skill {
+    margin: 5px 0;
     text-align: center;
   }
   body header .about-profile .close-button {
     -webkit-transform: translate(0, 25px);
     transform: translate(0, 25px);
   }
-  body header .about-profile .call-to-action {
-    width: 50%;
-    margin-bottom: 5px;
-  }
-  body header .about-profile .social-media {
-    width: 50%;
-  }
 }
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: landscape) {
-  body header .about-profile .skill {
+  body header {
+    height: 100vh;
+  }
+  body header .about-profile div.skill {
     margin: 15px 0;
     text-align: center;
   }
@@ -578,15 +517,8 @@ body header .arrow-right {
     -webkit-transform: translate(0, 25px);
     transform: translate(0, 25px);
   }
-  body header .about-profile .call-to-action {
-    width: 50%;
-    margin-bottom: 5px;
-  }
-  body header .about-profile .social-media {
-    width: 50%;
-  }
 }
-@media only screen and (max-width: 640px) and (min-width: 360px) and (orientation: portrait) {
+@media only screen and (min-height: 640px) and (min-width: 360px) and (orientation: portrait) {
   body header {
     height: 100vh;
   }
@@ -599,31 +531,28 @@ body header .arrow-right {
     text-align: center;
   }
   body header .about-profile .close-button {
-    -webkit-transform: translate(150px, 60px);
-    transform: translate(150px, 60px);
-  }
-  body header .about-profile .call-to-action {
-    margin-bottom: 5px;
+    -webkit-transform: translate(160px, 75px);
+    transform: translate(160px, 75px);
   }
 }
 @media only screen and (min-width: 640px) and (max-height: 360px) and (orientation: landscape) {
   body header {
     height: 100vh;
   }
+  body header .about-profile {
+    top: 45%;
+  }
   body header .about-profile .img-profile figure {
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
   }
-  body header .about-profile .skill {
+  body header .about-profile div.skill {
     margin: 5px 0;
     text-align: center;
   }
   body header .about-profile .close-button {
-    -webkit-transform: translate(0, 25px);
-    transform: translate(0, 25px);
-  }
-  body header .about-profile .call-to-action {
-    margin-bottom: 5px;
+    -webkit-transform: translate(0, 30px);
+    transform: translate(0, 30px);
   }
 }
 @media only screen and (min-width: 731px) and (max-height: 411px) and (orientation: landscape) {
@@ -634,20 +563,13 @@ body header .arrow-right {
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
   }
-  body header .about-profile .skill {
-    margin: 5px 0;
+  body header .about-profile div.skill {
+    margin: 10px 0;
     text-align: center;
   }
   body header .about-profile .close-button {
     -webkit-transform: translate(0, 25px);
     transform: translate(0, 25px);
-  }
-  body header .about-profile .call-to-action {
-    width: 50%;
-    margin-bottom: 5px;
-  }
-  body header .about-profile .social-media {
-    width: 50%;
   }
 }
 @media only screen and (min-width: 823px) and (max-height: 411px) and (orientation: landscape) {
@@ -665,14 +587,6 @@ body header .arrow-right {
   body header .about-profile .close-button {
     -webkit-transform: translate(0, 25px);
     transform: translate(0, 25px);
-  }
-  body header .about-profile .call-to-action {
-    width: 50%;
-    margin-bottom: 5px;
-    padding-left: 2px;
-  }
-  body header .about-profile .social-media {
-    width: 50%;
   }
 }
 
