@@ -253,6 +253,10 @@ body header .about-profile .social-media a:hover .fa-github {
   color: #000000;
   background: #fff;
 }
+body header .about-profile .social-media a:hover .fab.fa-gitlab {
+  background: #000000;
+  color: #fc6d27;
+}
 body header .about-profile .social-media a:hover .fa-linkedin {
   background: #0e76a8;
 }
