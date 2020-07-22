@@ -481,11 +481,14 @@ body header .arrow-right {
   body header .about-profile {
     height: 94%;
   }
+  body header .about-profile h5 {
+    display: none;
+  }
   body header .about-profile .me {
     width: 70%;
   }
   body header .about-profile .img-profile {
-    width: 15%;
+    width: 25%;
   }
   body header .about-profile div.skill {
     margin: 0;

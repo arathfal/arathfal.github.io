@@ -529,11 +529,14 @@ body {
       height: 100vh;
       .about-profile {
         height: 94%;
+        h5 {
+          display: none;
+        }
         .me {
           width: 70%;
         }
         .img-profile {
-          width: 15%;
+          width: 25%;
         }
         div.skill {
           margin: 0;
@@ -578,6 +581,7 @@ body {
     }
   }
 }
+
 @media only screen and (min-height: 640px) and (min-width: 360px) and (orientation: portrait) {
   body {
     header {
