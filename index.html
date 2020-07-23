@@ -5,107 +5,78 @@
     <link rel="stylesheet" href="assets/style/style.css" />
     <link
       rel="shortcut icon"
-      href="assets/image/Ara Logo.png"
+      href="assets/images/Ara Logo.png"
       type="image/x-icon"
     />
     <title>Aradea Athfal</title>
   </head>
   <body>
     <header>
-      <div class="overlay"></div>
-      <video
-        playsinline="playsinline"
-        autoplay="autoplay"
-        muted="muted"
-        loop="loop"
-      >
-        <source
-          src="assets/video/Cieling_Flames_4K_Motion_Background_Loop.mp4"
-          type="video/mp4"
-        />
-      </video>
-      <div class="container h-100">
-        <div class="h-100 w-100 align-items-center">
-          <div class="arrow-left">
-            <span></span>
-            <span></span>
-            <span></span>
+      <div class="wrapper">
+        <div class="h-100">
+          <div class="introduce text-center">
+            <img src="assets/images/Foto.jpg" class="" />
+            <h2 class="name mt-5">Aradea Athfal</h2>
+            <h6 class="career mb-4">Web Developer</h6>
+            <ul class="menu">
+              <li><a id="aboutBtn" role="button" data-target="#introduceDetails">About</a></li>
+              <li>|</li>
+              <li><a href="">Portfolio</a></li>
+            </ul>
           </div>
-          <div class="arrow-right">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <a class="name text-center" data-target="#profile" role="button">
-            <h1>Aradea Athfal</h1>
-          </a>
-          <h6 class="profession">Web Developer</h6>
-          <div id="profile" class="about-profile">
-            <a class="close-button" role="button"></a>
-            <div class="row justify-content-around">
-              <div class="me col-sm-10 col-md-8">
-                <h1 class="mb-2">Hello,</h1>
-                <h5 class="mb-4">Let me introduce myself</h5>
-                <p class="introduce">
-                  My name is Aradea Athfal Risdianto, you can call me Ara. I'm
-                  student at Islamic University of Maulana Malik Ibrahim Malang.
-                </p>
+          <div id="introduceDetails" class="col-sm-8 col-md-3 h-100 d-flex align-items-center">
+            <div class="introduce-details text-center">
+              <button type="button" class="close" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <p class="about text-left">
+                <strong>Hello,</strong><br />
+                My name is Aradea Athfal, you can call me Ara. I'm student at
+                Islamic University of Maulana Malik Ibrahim Malang.
+              </p>
+              <h6><strong>Skill</strong></h6>
+              <ul class="skill">
+                <li>
+                  <i class="fab fa-html5 fa-lg"></i>
+                </li>
+                <li>
+                  <i class="fab fa-css3-alt fa-lg"></i>
+                </li>
+                <li>
+                  <i class="fab fa-js fa-lg"></i>
+                </li>
+                <li>
+                  <i class="fab fa-sass fa-lg"></i>
+                </li>
+                <li>
+                  <i class="fab fa-bootstrap fa-lg"></i>
+                </li>
+                <li>
+                  <i class="fab fa-laravel fa-lg"></i>
+                </li>
+              </ul>
+              <h6><strong>Find me</strong></h6>
+              <div class="social-media">
+                <li><a
+                  href="https://api.whatsapp.com/send?phone=6283832022793&text=Saya%20tertarik%20untuk%20membuat%20website"
+                  ><i class="fab fa-whatsapp fa-2x mb-2"></i
+                ></a></li>
+                <li><a href="https://web.facebook.com/Aradea7x"
+                  ><i class="fab fa-facebook fa-2x mb-2"></i
+                ></a></li>
+                <li><a href="https://www.instagram.com/ara.athfal/"
+                  ><i class="fab fa-instagram fa-2x mb-2"></i
+                ></a></li>
+                <li><a href="https://github.com/arathfal"
+                  ><i class="fab fa-github fa-2x mb-2"></i
+                ></a></li>
+                <li><a href="https://gitlab.com/Ara-Tetsuya"
+                  ><i class="fab fa-gitlab fa-2x mb-2"></i
+                ></a></li>
+                <li><a href="https://www.linkedin.com/in/aradea-athfal-b056211a4/"
+                  ><i class="fab fa-linkedin fa-2x mb-2"></i
+                ></a></li>
               </div>
-              <div class="img-profile col-sm-2 col-md-2 text-center">
-                <figure>
-                  <img src="assets/image/Foto.jpg" />
-                </figure>
-              </div>
-            </div>
-            <div class="skill col-sm-12 text-center">
-              <h5 class="text-center mb-4">Skill</h5>
-              <div class="justify-content-around">
-                <span class="col-sm-2">
-                  <i class="fab fa-html5 fa-2x"></i>
-                </span>
-                <span class="col-sm-2">
-                  <i class="fab fa-css3-alt fa-2x"></i>
-                </span>
-                <span class="col-sm-2">
-                  <i class="fab fa-js fa-2x"></i>
-                </span>
-                <span class="col-sm-2">
-                  <i class="fab fa-sass fa-2x"></i>
-                </span>
-                <span class="col-sm-2">
-                  <i class="fab fa-bootstrap fa-2x"></i>
-                </span>
-                <span class="col-sm-2">
-                  <i class="fab fa-laravel fa-2x"></i>
-                </span>
-              </div>
-            </div>
-            <div class="contact justify-content-around text-center">
-              <div class="d-flex flex-column">
-                <h5 class="mb-3">Contact</h5>
-                <div class="social-media">
-                  <a
-                    href="https://api.whatsapp.com/send?phone=6283832022793&text=Saya%20tertarik%20untuk%20membuat%20website"
-                    ><i class="fab fa-whatsapp fa-lg mb-2"></i
-                  ></a>
-                  <a href="https://web.facebook.com/Aradea7x"
-                    ><i class="fab fa-facebook fa-lg mb-2"></i
-                  ></a>
-                  <a href="https://www.instagram.com/ara.athfal/"
-                    ><i class="fab fa-instagram fa-lg mb-2"></i
-                  ></a>
-                  <a href="https://github.com/arathfal"
-                    ><i class="fab fa-github fa-lg mb-2"></i
-                  ></a>
-                  <a href="https://gitlab.com/Ara-Tetsuya"
-                    ><i class="fab fa-gitlab fa-lg mb-2"></i
-                  ></a>
-                  <a href="https://www.linkedin.com/in/aradea-athfal-b056211a4/"
-                    ><i class="fab fa-linkedin fa-lg mb-2"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

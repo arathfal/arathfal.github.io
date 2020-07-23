@@ -1,599 +1,155 @@
 @import url("../vendor/bootstrap-4.3.1/css/bootstrap.min.css");
 @import url("../vendor/fontawesome/css/all.min.css");
-@font-face {
-  font-family: "Inter";
-  src: url("/assets/fonts/Inter/Inter.ttf");
-}
-@font-face {
-  font-family: "Black Ops One";
-  src: url("/assets/fonts/Black Ops One/BlackOpsOne-Regular.ttf");
-}
-html {
-  scroll-behavior: smooth;
-}
-
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-.mt-50 {
-  margin-top: 50px;
+html {
+  scroll-behavior: smooth;
 }
 
-.px-8 {
-  padding: 0 8px;
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins/Poppins-Regular.ttf");
 }
-
-.px-10 {
-  padding: 0 10px;
-}
-
 body {
   margin: 0;
   padding: 0;
-  font-family: "Inter", sans-serif;
-  overflow-y: hidden;
-  overflow-x: hidden;
-  background-color: #161616;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+body .introduce-details,
+body .introduce-details .social-media a {
+  color: #141414;
+}
+body .name,
+body .career,
+body .menu a:hover {
+  color: #c5c5c5;
+}
+body .menu a,
+body .menu li {
+  color: #8d8d8d;
+}
+body li {
+  margin: 0 3px;
+  list-style: none;
+  display: inline;
 }
 body header {
   position: relative;
-  background-color: black;
-  height: calc(100vh+70px);
-  min-height: 25rem;
+  height: 100vh;
   width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("../images/Background.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   overflow: hidden;
 }
-body header .name h1,
-body header .about-profile .call-to-action a,
-body header .profession,
-body header .close-button {
-  color: #cfcfcf;
-}
-body header .introduce,
-body header .about-profile .skill div i {
-  color: #a3a3a3;
-}
-body header .name:hover,
-body header .about-profile h1,
-body header .about-profile h5,
-body header .about-profile .skill h6,
-body header .about-profile .social-media a,
-body header .about-profile .call-to-action a:hover,
-body header .close-button:hover {
-  color: #fff;
-}
-body header .name,
-body header .profession,
-body header video,
-body header .about-profile {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-}
-body header .name,
-body header .about-profile h1,
-body header .about-profile h5 {
-  font-family: "Black Ops One";
-}
-body header .arrow-left,
-body header .arrow-right {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-}
-body header .arrow-left span,
-body header .arrow-right span {
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-body header .arrow-left {
-  left: 32%;
-  top: 45%;
-  transform: translate(-100%, -50%) rotate(45deg);
-}
-body header .arrow-left span {
+body header .wrapper {
   top: 0;
   left: 0;
-  border-right: 2px solid #cfcfcf;
-  border-top: 2px solid #cfcfcf;
-  animation: animate-left 2s linear infinite;
-  opacity: 0;
-}
-body header .arrow-left span:nth-child(1) {
-  -webkit-transform: translate(-8px, 8px);
-  transform: translate(-8px, 8px);
-  animation-delay: -0.6s;
-}
-body header .arrow-left span:nth-child(2) {
-  -webkit-transform: translate(0, 0);
-  transform: translate(0, 0);
-  animation-delay: -0.3s;
-}
-body header .arrow-left span:nth-child(3) {
-  -webkit-transform: translate(8px, -8px);
-  transform: translate(8px, -8px);
-  animation-delay: 0s;
-}
-body header .arrow-right {
-  right: 32%;
-  top: 45%;
-  transform: translate(50%, -50%) rotate(45deg);
-}
-body header .arrow-right span {
-  right: 0;
-  top: 0;
-  border-left: 2px solid #cfcfcf;
-  border-bottom: 2px solid #cfcfcf;
-  animation: animate-right 2s linear infinite;
-  opacity: 0;
-}
-body header .arrow-right span:nth-child(1) {
-  -webkit-transform: translate(-8px, 8px);
-  transform: translate(-8px, 8px);
-  animation-delay: 0;
-}
-body header .arrow-right span:nth-child(2) {
-  -webkit-transform: translate(0, 0);
-  transform: translate(0, 0);
-  animation-delay: -0.3s;
-}
-body header .arrow-right span:nth-child(3) {
-  -webkit-transform: translate(8px, -8px);
-  transform: translate(8px, -8px);
-  animation-delay: -0.6s;
-}
-body header .name {
-  -webkit-transform: translate(-50%, -100%);
-  transform: translate(-50%, -100%);
-  letter-spacing: 0.3rem;
-  font-size: 3rem;
+  position: absolute;
+  width: 100%;
+  height: 100%;
   background: unset;
-  border: none;
-  cursor: pointer;
-}
-body header .name:hover {
-  text-shadow: -1px 5px 10px #cfcfcf;
-  transition: all 1s ease-in-out;
-  text-decoration: none;
-}
-body header .profession {
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, 0);
-  transform: translate(-50%, 0);
-}
-body header .name,
-body header .profession {
-  animation: intro 1.5s ease-in-out;
-}
-body header video {
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: 0;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-body header .container {
-  position: relative;
-  z-index: 3;
-}
-body header .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
-body header .about-profile {
-  width: 100%;
-  z-index: 3;
-  border: none;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-body header .about-profile h1,
-body header .about-profile h5 {
-  letter-spacing: 0.3rem;
-}
-body header .about-profile .introduce {
-  font-size: 15px;
-  line-height: 1.5rem;
-}
-body header .about-profile .img-profile img {
-  clip-path: circle(50% at 50% 50%);
-  filter: grayscale(30%);
+body header .wrapper .introduce {
+  background: unset;
+  position: absolute;
   width: 100%;
   height: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
-body header .about-profile div.skill {
-  margin: 40px 0;
+body header .wrapper .introduce img {
+  width: 150px;
+  transform: scale(1.1);
+  filter: grayscale(50%) brightness(100%);
+  clip-path: circle(50% at 50% 50%);
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  transition: all 1s ease-in-out;
 }
-body header .about-profile div.skill h6 {
-  font-weight: bold;
+body header .wrapper .introduce img:hover {
+  filter: grayscale(0) brightness(110%);
+  transform: scale(1.2);
+  border: none;
 }
-body header .about-profile div.skill span i {
-  display: inline-block;
-  margin-bottom: 5px;
+body header .wrapper .introduce .name {
+  font-weight: 700;
+  letter-spacing: 1.5px;
 }
-body header .about-profile .social-media a {
-  margin-bottom: 5px;
-  margin-right: 5px;
+body header .wrapper .introduce ul {
+  transform: translateX(-22px);
+}
+body header .wrapper .introduce ul a {
   text-decoration: none;
+  cursor: pointer;
 }
-body header .about-profile .social-media a i {
-  background-color: #a3a3a3;
+body header .wrapper .introduce-details {
+  padding: 5px 10px;
+  position: absolute;
   border-radius: 10px;
-  padding-top: 7.5px;
-  width: 30px;
-  height: 30px;
+  background: linear-gradient(150deg, #ffffff, #c5c5c5, #8d8d8d);
+  left: 150%;
+  width: 100%;
+  height: auto;
+  box-shadow: 2px 2px 5px #8d8d8d;
 }
-body header .about-profile .social-media a:hover i {
-  color: #fff;
+body header .wrapper .introduce-details .skill {
+  transform: translateX(-5%);
 }
-body header .about-profile .social-media a:hover .fab.fa-whatsapp {
+body header .wrapper .introduce-details .social-media a i {
+  border-radius: 10px;
+  padding-top: 1px;
+  width: 35px;
+  height: 35px;
+}
+body header .wrapper .introduce-details .social-media a:hover {
+  transition: all 1s ease-in-out;
+}
+body header .wrapper .introduce-details .social-media a:hover i {
+  color: #ffffff;
+}
+body header .wrapper .introduce-details .social-media a:hover .fab.fa-whatsapp {
   background: #4fce5d;
 }
-body header .about-profile .social-media a:hover .fab.fa-facebook {
-  background: #fff;
+body header .wrapper .introduce-details .social-media a:hover .fab.fa-facebook {
+  background: #ffffff;
   color: #3b5998;
 }
-body header .about-profile .social-media a:hover .fa-instagram {
+body header .wrapper .introduce-details .social-media a:hover .fa-instagram {
   background: #5851db;
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #5851db 90%);
 }
-body header .about-profile .social-media a:hover .fa-github {
+body header .wrapper .introduce-details .social-media a:hover .fa-github {
   color: #000000;
-  background: #fff;
+  background: #ffffff;
 }
-body header .about-profile .social-media a:hover .fab.fa-gitlab {
+body header .wrapper .introduce-details .social-media a:hover .fab.fa-gitlab {
   background: #000000;
   color: #fc6d27;
 }
-body header .about-profile .social-media a:hover .fa-linkedin {
+body header .wrapper .introduce-details .social-media a:hover .fa-linkedin {
   background: #0e76a8;
 }
-body header .about-profile .close-button {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  right: 50%;
-  top: -10%;
-  cursor: pointer;
-  z-index: 3;
-}
-body header .about-profile .close-button:before, body header .about-profile .close-button:after {
-  position: absolute;
-  left: 15px;
-  content: " ";
-  height: 15px;
-  width: 2px;
-  background-color: #cfcfcf;
-}
-body header .about-profile .close-button:before {
-  transform: rotate(45deg);
-}
-body header .about-profile .close-button:after {
-  transform: rotate(-45deg);
-}
 
-@keyframes intro {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes animate-left {
-  0% {
-    top: 5px;
-    left: -5px;
-    opacity: 0;
-  }
-  25% {
-    top: 0;
-    left: 0;
-    opacity: 1;
-  }
-  50%, 100% {
-    top: -5px;
-    left: 5px;
-    opacity: 0;
-  }
-}
-@keyframes animate-right {
-  0% {
-    top: -5px;
-    right: -5px;
-    opacity: 0;
-  }
-  25% {
-    top: 0;
-    right: 0;
-    opacity: 1;
-  }
-  50%, 100% {
-    top: 5px;
-    right: 5px;
-    opacity: 0;
-  }
-}
-@media (pointer: coarse) and (hover: none) {
-  header {
-    background: url("../image/background.png") rgba(0, 0, 0, 0.5) no-repeat center center scroll;
-  }
-
-  header video {
-    display: none;
-  }
-}
-@media only screen and (min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
-  body header .arrow-left,
-body header .arrow-right {
-    top: 47.5%;
-  }
-}
-/* Landscape */
-@media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
-  body header .arrow-left,
-body header .arrow-right {
-    top: 47%;
-  }
-}
-@media only screen and (min-width: 993px) and (max-width: 1125px) {
-  body header .arrow-left {
-    left: 28%;
-  }
-  body header .arrow-right {
-    right: 28%;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 992px) {
-  body header .arrow-left,
-body header .arrow-right {
-    top: 42%;
-  }
-  body .about-profile .close-button {
-    -webkit-transform: translate(350px, 50px);
-    transform: translate(350px, 50px);
-  }
-}
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-  body header .arrow-left,
-body header .arrow-right {
-    top: 42%;
-  }
-  body header .arrow-left {
-    left: 25%;
-  }
-  body header .arrow-right {
-    right: 25%;
-  }
-  body .about-profile .close-button {
-    -webkit-transform: translate(50px, 25px);
-    transform: translate(50px, 25px);
+  body header .introduce-details {
+    transform: translateX(-125%);
   }
 }
-@media only screen and (min-width: 516px) and (max-width: 575px) {
-  body header .arrow-left,
-body header .arrow-right {
-    top: 42%;
+@media only screen and (max-width: 575px) {
+  body header .wrapper {
+    padding: 0 10px;
   }
-  body header .arrow-left {
-    left: 25%;
-  }
-  body header .arrow-right {
-    right: 25%;
-  }
-  body .about-profile {
-    padding: 5px;
-  }
-  body .about-profile .img-profile {
-    width: 30%;
-  }
-  body .about-profile .skill {
-    margin: 30px 0;
-    text-align: center;
-  }
-  body .about-profile .close-button {
-    -webkit-transform: translate(250px, 70px);
-    transform: translate(250px, 70px);
-  }
-}
-@media only screen and (min-width: 357px) and (max-width: 515px) {
-  body header .arrow-left,
-body header .arrow-right {
-    top: 42%;
-  }
-  body header .arrow-left {
-    left: 18%;
-  }
-  body header .arrow-right {
-    right: 18%;
-  }
-  body .about-profile {
-    padding: 5px;
-  }
-  body .about-profile .img-profile {
-    width: 30%;
-  }
-  body .about-profile .skill {
-    margin: 15px 0;
-    text-align: center;
-  }
-  body .about-profile .close-button {
-    -webkit-transform: translate(175px, 70px);
-    transform: translate(175px, 70px);
-  }
-}
-@media only screen and (max-width: 356px) {
-  body header .arrow-left,
-body header .arrow-right {
-    top: 42%;
-  }
-  body header .arrow-left {
-    left: 12%;
-  }
-  body header .arrow-right {
-    right: 12%;
-  }
-  body .about-profile {
-    padding: 5px;
-  }
-  body .about-profile .img-profile {
-    width: 30%;
-  }
-  body .about-profile .skill {
-    margin: 0;
-    text-align: center;
-  }
-  body .about-profile .close-button {
-    left: 80%;
-    -webkit-transform: translate(0, 70px);
-    transform: translate(0, 70px);
-  }
-}
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
-  body header .about-profile div.skill {
-    margin: 5px 0;
-    text-align: center;
-  }
-  body header .about-profile .close-button {
-    -webkit-transform: translate(25px, 60px);
-    transform: translate(25px, 60px);
-  }
-}
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) {
-  body header {
-    height: 100vh;
-  }
-  body header .about-profile {
-    height: 94%;
-  }
-  body header .about-profile h5 {
-    display: none;
-  }
-  body header .about-profile .me {
-    width: 70%;
-  }
-  body header .about-profile .img-profile {
-    width: 25%;
-  }
-  body header .about-profile div.skill {
-    margin: 0;
-    text-align: center;
-  }
-  body header .about-profile .close-button {
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
-  }
-}
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) {
-  body header {
-    height: 100vh;
-  }
-  body header .about-profile div.skill {
-    margin: 5px 0;
-    text-align: center;
-  }
-  body header .about-profile .close-button {
-    -webkit-transform: translate(0, 25px);
-    transform: translate(0, 25px);
-  }
-}
-@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: landscape) {
-  body header {
-    height: 100vh;
-  }
-  body header .about-profile div.skill {
-    margin: 15px 0;
-    text-align: center;
-  }
-  body header .about-profile .close-button {
-    -webkit-transform: translate(0, 25px);
-    transform: translate(0, 25px);
-  }
-}
-@media only screen and (min-height: 640px) and (min-width: 360px) and (orientation: portrait) {
-  body header {
-    height: 100vh;
-  }
-  body header .about-profile .img-profile figure {
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
-  }
-  body header .about-profile .skill {
-    margin: 5px 0;
-    text-align: center;
-  }
-  body header .about-profile .close-button {
-    -webkit-transform: translate(160px, 75px);
-    transform: translate(160px, 75px);
-  }
-}
-@media only screen and (min-width: 640px) and (max-height: 360px) and (orientation: landscape) {
-  body header {
-    height: 100vh;
-  }
-  body header .about-profile {
-    top: 45%;
-  }
-  body header .about-profile .img-profile figure {
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
-  }
-  body header .about-profile div.skill {
-    margin: 5px 0;
-    text-align: center;
-  }
-  body header .about-profile .close-button {
-    -webkit-transform: translate(0, 30px);
-    transform: translate(0, 30px);
-  }
-}
-@media only screen and (min-width: 731px) and (max-height: 411px) and (orientation: landscape) {
-  body header {
-    height: 100vh;
-  }
-  body header .about-profile .img-profile figure {
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
-  }
-  body header .about-profile div.skill {
-    margin: 10px 0;
-    text-align: center;
-  }
-  body header .about-profile .close-button {
-    -webkit-transform: translate(0, 25px);
-    transform: translate(0, 25px);
-  }
-}
-@media only screen and (min-width: 823px) and (max-height: 411px) and (orientation: landscape) {
-  body header {
-    height: 100vh;
-  }
-  body header .about-profile .img-profile figure {
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
-  }
-  body header .about-profile .skill {
-    margin: 5px 0;
-    text-align: center;
-  }
-  body header .about-profile .close-button {
-    -webkit-transform: translate(0, 25px);
-    transform: translate(0, 25px);
+  body header .wrapper .introduce-details {
+    transform: translateX(-150%);
   }
 }
 

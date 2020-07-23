@@ -1,667 +1,173 @@
-@font-face {
-  font-family: "Inter";
-  src: url("/assets/fonts/Inter/Inter.ttf");
-}
-@font-face {
-  font-family: "Black Ops One";
-  src: url("/assets/fonts/Black\ Ops\ One/BlackOpsOne-Regular.ttf");
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-
-.mt-50 {
-  margin-top: 50px;
+html {
+  scroll-behavior: smooth;
 }
-.px-8 {
-  padding: 0 8px;
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins/Poppins-Regular.ttf");
 }
-.px-10 {
-  padding: 0 10px;
-}
-
 body {
   margin: 0;
   padding: 0;
-  font-family: "Inter", sans-serif;
-  overflow-y: hidden;
-  overflow-x: hidden;
-  background-color: $bg-dark;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
 
+  .introduce-details,
+  .introduce-details .social-media a {
+    color: $dark;
+  }
+  .name,
+  .career,
+  .menu a:hover {
+    color: $light-1;
+  }
+
+  .menu a,
+  .menu li {
+    color: $light-2;
+  }
+  li {
+    margin: 0 3px;
+    list-style: none;
+    display: inline;
+  }
   header {
     position: relative;
-    background-color: black;
-    height: calc(100vh+70px);
-    min-height: 25rem;
+    height: 100vh;
     width: 100%;
+    background: linear-gradient($banner, $banner),
+      url("../images/Background.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     overflow: hidden;
 
-    .name h1,
-    .about-profile .call-to-action a,
-    .profession,
-    .close-button {
-      color: $gray-1;
-    }
-    .introduce,
-    .about-profile .skill div i {
-      color: $gray-2;
-    }
-    .name:hover,
-    .about-profile h1,
-    .about-profile h5,
-    .about-profile .skill h6,
-    .about-profile .social-media a,
-    .about-profile .call-to-action a:hover,
-    .close-button:hover {
-      color: $white;
-    }
-    .name,
-    .profession,
-    video,
-    .about-profile {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-    }
-    .name,
-    .about-profile h1,
-    .about-profile h5 {
-      font-family: "Black Ops One";
-    }
-    .arrow-left,
-    .arrow-right {
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      span {
-        position: absolute;
-        display: block;
-        width: 100%;
-        height: 100%;
-      }
-    }
-    .arrow-left {
-      left: 32%;
-      top: 45%;
-      transform: translate(-100%, -50%) rotate(45deg);
-      span {
-        top: 0;
-        left: 0;
-        border-right: 2px solid $gray-1;
-        border-top: 2px solid $gray-1;
-        animation: animate-left 2s linear infinite;
-        opacity: 0;
-        &:nth-child(1) {
-          @include translate(-8px, 8px);
-          animation-delay: -0.6s;
-        }
-        &:nth-child(2) {
-          @include translate(0, 0);
-          animation-delay: -0.3s;
-        }
-        &:nth-child(3) {
-          @include translate(8px, -8px);
-          animation-delay: 0s;
-        }
-      }
-    }
-    .arrow-right {
-      right: 32%;
-      top: 45%;
-      transform: translate(50%, -50%) rotate(45deg);
-      span {
-        right: 0;
-        top: 0;
-        border-left: 2px solid $gray-1;
-        border-bottom: 2px solid $gray-1;
-        animation: animate-right 2s linear infinite;
-        opacity: 0;
-        &:nth-child(1) {
-          @include translate(-8px, 8px);
-          animation-delay: 0;
-        }
-        &:nth-child(2) {
-          @include translate(0, 0);
-          animation-delay: -0.3s;
-        }
-        &:nth-child(3) {
-          @include translate(8px, -8px);
-          animation-delay: -0.6s;
-        }
-      }
-    }
-    .name {
-      @include translate(-50%, -100%);
-      letter-spacing: 0.3rem;
-      font-size: 3rem;
-      background: unset;
-      border: none;
-      cursor: pointer;
-      &:hover {
-        text-shadow: -1px 5px 10px $gray-1;
-        transition: all 1s ease-in-out;
-        text-decoration: none;
-      }
-    }
-    .profession {
-      left: 50%;
-      top: 50%;
-      @include translate(-50%, 0);
-    }
-    .name,
-    .profession {
-      animation: intro 1.5s ease-in-out;
-    }
-    video {
-      min-width: 100%;
-      min-height: 100%;
-      width: auto;
-      height: auto;
-      z-index: 0;
-      @include translate(-50%, -50%);
-    }
-    .container {
-      position: relative;
-      z-index: 3;
-    }
-    .overlay {
-      position: absolute;
+    .wrapper {
       top: 0;
       left: 0;
+      position: absolute;
+      width: 100%;
       height: 100%;
-      width: 100%;
-      background: $banner-1;
+      background: unset;
       z-index: 1;
-    }
-    .about-profile {
-      width: 100%;
-      z-index: 3;
-      border: none;
-      @include translate(-50%, -50%);
-      h1,
-      h5 {
-        letter-spacing: 0.3rem;
-      }
       .introduce {
-        font-size: 15px;
-        line-height: 1.5rem;
-      }
-      .img-profile {
-        img {
-          clip-path: circle(50% at 50% 50%);
-          filter: grayscale(30%);
-          width: 100%;
-          height: auto;
-        }
-      }
-      div.skill {
-        margin: 40px 0;
-        h6 {
-          font-weight: bold;
-        }
-        span {
-          i {
-            display: inline-block;
-            margin-bottom: 5px;
-          }
-        }
-      }
-      .social-media {
-        a {
-          margin-bottom: 5px;
-          margin-right: 5px;
-          text-decoration: none;
-          i {
-            background-color: $gray-2;
-            border-radius: 10px;
-            padding-top: 7.5px;
-            width: 30px;
-            height: 30px;
-          }
-          &:hover {
-            i {
-              color: $white;
-            }
-            .fab.fa-whatsapp {
-              background: #4fce5d;
-            }
-            .fab.fa-facebook {
-              background: $white;
-              color: #3b5998;
-            }
-            .fa-instagram {
-              background: #5851db;
-              background: radial-gradient(
-                circle at 30% 107%,
-                #fdf497 0%,
-                #fdf497 5%,
-                #fd5949 45%,
-                #d6249f 60%,
-                #5851db 90%
-              );
-            }
-            .fa-github {
-              color: #000000;
-              background: $white;
-            }
-            .fab.fa-gitlab {
-              background: #000000;
-              color: #fc6d27;
-            }
-            .fa-linkedin {
-              background: #0e76a8;
-            }
-          }
-        }
-      }
-      .close-button {
+        background: unset;
         position: absolute;
-        width: 20px;
-        height: 20px;
-        right: 50%;
-        top: -10%;
-        cursor: pointer;
-        z-index: 3;
+        width: 100%;
+        height: auto;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
 
-        &:before,
-        &:after {
-          position: absolute;
-          left: 15px;
-          content: " ";
-          height: 15px;
-          width: 2px;
-          background-color: $gray-1;
+        img {
+          width: 150px;
+          transform: scale(1.1);
+          filter: grayscale(50%) brightness(100%);
+          clip-path: circle(50% at 50% 50%);
+          border: 3px solid $white;
+          border-radius: 50%;
+          transition: all 1s ease-in-out;
+          &:hover {
+            filter: grayscale(0) brightness(110%);
+            transform: scale(1.2);
+            border: none;
+          }
         }
-        &:before {
-          transform: rotate(45deg);
+        .name {
+          font-weight: 700;
+          letter-spacing: 1.5px;
         }
-        &:after {
-          transform: rotate(-45deg);
+        ul {
+          transform: translateX(-22px);
+          a {
+            text-decoration: none;
+            cursor: pointer;
+          }
+        }
+      }
+      .introduce-details {
+        padding: 5px 10px;
+        position: absolute;
+        border-radius: 10px;
+        background: linear-gradient(150deg, $white, $light-1, $light-2);
+        left: 150%;
+        width: 100%;
+        height: auto;
+        box-shadow: 2px 2px 5px $light-2;
+
+        .skill {
+          transform: translateX(-5%);
+        }
+        .social-media {
+          a {
+            i {
+              border-radius: 10px;
+              padding-top: 1px;
+              width: 35px;
+              height: 35px;
+            }
+            &:hover {
+              transition: all 1s ease-in-out;
+              i {
+                color: $white;
+              }
+              .fab.fa-whatsapp {
+                background: #4fce5d;
+              }
+              .fab.fa-facebook {
+                background: $white;
+                color: #3b5998;
+              }
+              .fa-instagram {
+                background: #5851db;
+                background: radial-gradient(
+                  circle at 30% 107%,
+                  #fdf497 0%,
+                  #fdf497 5%,
+                  #fd5949 45%,
+                  #d6249f 60%,
+                  #5851db 90%
+                );
+              }
+              .fa-github {
+                color: #000000;
+                background: $white;
+              }
+              .fab.fa-gitlab {
+                background: #000000;
+                color: #fc6d27;
+              }
+              .fa-linkedin {
+                background: #0e76a8;
+              }
+            }
+          }
         }
       }
     }
   }
 }
 
-@keyframes intro {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes animate-left {
-  0% {
-    top: 5px;
-    left: -5px;
-    opacity: 0;
-  }
-  25% {
-    top: 0;
-    left: 0;
-    opacity: 1;
-  }
-  50%,
-  100% {
-    top: -5px;
-    left: 5px;
-    opacity: 0;
-  }
-}
-@keyframes animate-right {
-  0% {
-    top: -5px;
-    right: -5px;
-    opacity: 0;
-  }
-  25% {
-    top: 0;
-    right: 0;
-    opacity: 1;
-  }
-  50%,
-  100% {
-    top: 5px;
-    right: 5px;
-    opacity: 0;
-  }
-}
-@media (pointer: coarse) and (hover: none) {
-  header {
-    background: url("../image/background.png") $banner-1 no-repeat center center
-      scroll;
-  }
-  header video {
-    display: none;
-  }
-}
-// ====================================
-// Ipad PRO
-@media only screen and (min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
-  body {
-    header {
-      .arrow-left,
-      .arrow-right {
-        top: 47.5%;
-      }
-    }
-  }
-}
-
-/* Landscape */
-@media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
-  body {
-    header {
-      .arrow-left,
-      .arrow-right {
-        top: 47%;
-      }
-    }
-  }
-}
-//===========================================================
-
-@media only screen and (min-width: 993px) and (max-width: 1125px) {
-  body {
-    header {
-      .arrow-left {
-        left: 28%;
-      }
-      .arrow-right {
-        right: 28%;
-      }
-    }
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 992px) {
-  body {
-    header {
-      .arrow-left,
-      .arrow-right {
-        top: 42%;
-      }
-    }
-    .about-profile {
-      .close-button {
-        @include translate(350px, 50px);
-      }
-    }
-  }
-}
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   body {
     header {
-      .arrow-left,
-      .arrow-right {
-        top: 42%;
-      }
-      .arrow-left {
-        left: 25%;
-      }
-      .arrow-right {
-        right: 25%;
-      }
-    }
-    .about-profile {
-      .close-button {
-        @include translate(50px, 25px);
+      .introduce-details {
+        transform: translateX(-125%);
       }
     }
   }
 }
-@media only screen and (min-width: 516px) and (max-width: 575px) {
+@media only screen and (max-width: 575px) {
   body {
     header {
-      .arrow-left,
-      .arrow-right {
-        top: 42%;
-      }
-      .arrow-left {
-        left: 25%;
-      }
-      .arrow-right {
-        right: 25%;
-      }
-    }
-    .about-profile {
-      padding: 5px;
-      .img-profile {
-        width: 30%;
-      }
-      .skill {
-        margin: 30px 0;
-        text-align: center;
-      }
-      .close-button {
-        @include translate(250px, 70px);
-      }
-    }
-  }
-}
-@media only screen and (min-width: 357px) and (max-width: 515px) {
-  body {
-    header {
-      .arrow-left,
-      .arrow-right {
-        top: 42%;
-      }
-      .arrow-left {
-        left: 18%;
-      }
-      .arrow-right {
-        right: 18%;
-      }
-    }
-    .about-profile {
-      padding: 5px;
-      .img-profile {
-        width: 30%;
-      }
-      .skill {
-        margin: 15px 0;
-        text-align: center;
-      }
-      .close-button {
-        @include translate(175px, 70px);
-      }
-    }
-  }
-}
-@media only screen and (max-width: 356px) {
-  body {
-    header {
-      .arrow-left,
-      .arrow-right {
-        top: 42%;
-      }
-      .arrow-left {
-        left: 12%;
-      }
-      .arrow-right {
-        right: 12%;
-      }
-    }
-    .about-profile {
-      padding: 5px;
-      .img-profile {
-        width: 30%;
-      }
-      .skill {
-        margin: 0;
-        text-align: center;
-      }
-      .close-button {
-        left: 80%;
-        @include translate(0, 70px);
-      }
-    }
-  }
-}
-//================Mobile================
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
-  body {
-    header {
-      .about-profile {
-        div.skill {
-          margin: 5px 0;
-          text-align: center;
-        }
-        .close-button {
-          @include translate(25px, 60px);
-        }
-      }
-    }
-  }
-}
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) {
-  body {
-    header {
-      height: 100vh;
-      .about-profile {
-        height: 94%;
-        h5 {
-          display: none;
-        }
-        .me {
-          width: 70%;
-        }
-        .img-profile {
-          width: 25%;
-        }
-        div.skill {
-          margin: 0;
-          text-align: center;
-        }
-        .close-button {
-          @include translate(0, 0);
-        }
-      }
-    }
-  }
-}
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) {
-  body {
-    header {
-      height: 100vh;
-      .about-profile {
-        div.skill {
-          margin: 5px 0;
-          text-align: center;
-        }
-        .close-button {
-          @include translate(0, 25px);
-        }
-      }
-    }
-  }
-}
-@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: landscape) {
-  body {
-    header {
-      height: 100vh;
-      .about-profile {
-        div.skill {
-          margin: 15px 0;
-          text-align: center;
-        }
-        .close-button {
-          @include translate(0, 25px);
-        }
-      }
-    }
-  }
-}
-
-@media only screen and (min-height: 640px) and (min-width: 360px) and (orientation: portrait) {
-  body {
-    header {
-      height: 100vh;
-      .about-profile {
-        .img-profile {
-          figure {
-            @include translate(0, 0);
-          }
-        }
-        .skill {
-          margin: 5px 0;
-          text-align: center;
-        }
-        .close-button {
-          @include translate(160px, 75px);
-        }
-      }
-    }
-  }
-}
-@media only screen and (min-width: 640px) and (max-height: 360px) and (orientation: landscape) {
-  body {
-    header {
-      height: 100vh;
-      .about-profile {
-        top: 45%;
-        .img-profile {
-          figure {
-            @include translate(0, 0);
-          }
-        }
-        div.skill {
-          margin: 5px 0;
-          text-align: center;
-        }
-        .close-button {
-          @include translate(0, 30px);
-        }
-      }
-    }
-  }
-}
-@media only screen and (min-width: 731px) and (max-height: 411px) and (orientation: landscape) {
-  body {
-    header {
-      height: 100vh;
-      .about-profile {
-        .img-profile {
-          figure {
-            @include translate(0, 0);
-          }
-        }
-        div.skill {
-          margin: 10px 0;
-          text-align: center;
-        }
-        .close-button {
-          @include translate(0, 25px);
-        }
-      }
-    }
-  }
-}
-@media only screen and (min-width: 823px) and (max-height: 411px) and (orientation: landscape) {
-  body {
-    header {
-      height: 100vh;
-      .about-profile {
-        .img-profile {
-          figure {
-            @include translate(0, 0);
-          }
-        }
-        .skill {
-          margin: 5px 0;
-          text-align: center;
-        }
-        .close-button {
-          @include translate(0, 25px);
+      .wrapper {
+        padding: 0 10px;
+        .introduce-details {
+          transform: translateX(-150%);
         }
       }
     }
