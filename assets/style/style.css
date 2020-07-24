@@ -25,13 +25,12 @@ body {
   overflow-x: hidden;
   overflow-y: scroll;
 }
-body .introduce-details,
-body .introduce-details .social-media a {
-  color: #141414;
-}
 body .name,
 body .career,
-body .menu a:hover {
+body .menu a:hover,
+body .introduce-details,
+body .introduce-details .social-media a,
+body .introduce-details button:hover {
   color: #c5c5c5;
 }
 body .menu a,
@@ -39,7 +38,8 @@ body .menu li,
 body #portfolio {
   color: #8d8d8d;
 }
-body #portfolio a {
+body #portfolio a,
+body .introduce-details button {
   color: #ffffff;
 }
 body li {
@@ -103,14 +103,13 @@ body header .wrapper .introduce ul a {
   cursor: pointer;
 }
 body header .wrapper .introduce-details {
-  padding: 5px 10px;
+  padding: 5px 15px;
   position: absolute;
   border-radius: 10px;
-  background: linear-gradient(150deg, #ffffff, #c5c5c5, #8d8d8d);
-  left: 150%;
+  background: unset;
+  left: 50%;
   width: 100%;
   height: auto;
-  box-shadow: 2px 2px 5px #8d8d8d;
   z-index: 2;
 }
 body header .wrapper .introduce-details .skill {
@@ -247,7 +246,7 @@ body main #portfolio .card .caption h3 {
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   body header .introduce-details {
-    transform: translateX(-125%);
+    transform: translateX(-25%);
   }
 }
 @media only screen and (max-width: 575px) {
@@ -255,7 +254,7 @@ body main #portfolio .card .caption h3 {
     padding: 0 10px;
   }
   body header .wrapper .introduce-details {
-    transform: translateX(-150%);
+    transform: translateX(-50%);
   }
 }
 
