@@ -1,0 +1,32 @@
+@keyframes triangle {
+  0% {
+    transform: translate(0, 0) rotate(0);
+  }
+  20% {
+    transform: translate(150px, 150px) rotate(120deg);
+  }
+  30% {
+    transform: translate(300px, 300px) rotate(240deg);
+  }
+  40% {
+    transform: translate(450px, 450px) rotate(360deg);
+  }
+  50% {
+    transform: translate(300px, 450px) rotate(480deg);
+  }
+  60% {
+    transform: translate(150px, 450px) rotate(600deg);
+  }
+  70% {
+    transform: translate(0, 450px) rotate(720deg);
+  }
+  80% {
+    transform: translate(0, 300px) rotate(840deg);
+  }
+  90% {
+    transform: translate(0, 150px) rotate(980deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0);
+  }
+}

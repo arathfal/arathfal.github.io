@@ -102,7 +102,7 @@ body {
       left: 50%;
       z-index: 2;
       text-transform: uppercase;
-      @include translate(-50%, -50%);
+      @include translate(-50%, -10px);
     }
     p.animated {
       animation-delay: 1s;
@@ -437,6 +437,11 @@ body {
 }
 
 @media only screen and (max-width: 599px) {
+  #kind {
+    .img-content {
+      margin: 0 10px;
+    }
+  }
   #artTypes {
     .pure {
       .animated {

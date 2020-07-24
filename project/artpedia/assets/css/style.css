@@ -5,7 +5,6 @@
   font-family: "Inter";
   src: url("/assets/fonts/Inter/Inter.ttf");
 }
-
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -27,39 +26,45 @@ body {
   overflow-x: hidden;
   overflow-y: scroll;
 }
-
 body .animated {
   animation-duration: 2s;
 }
-
-body .art-definition .animated, body .img-intro .animated {
+body .art-definition .animated,
+body .img-intro .animated {
   animation-duration: 0.5s;
 }
-
-body .element-box .animated, body .two-D .animated, body .three-D .animated {
+body .element-box .animated,
+body .two-D .animated,
+body .three-D .animated {
   animation-delay: 1s;
 }
-
-body h1.title, body p.tagline, body h3.subtitle, body .btn-kind, body #twoDimention, body #threeDimention, body .element-content h4, body .element-content p, body footer, body .top-footer .footer-menu a:hover, body .top-footer .social-media a:hover, body .carousel-caption {
+body h1.title,
+body p.tagline,
+body h3.subtitle,
+body .btn-kind,
+body #twoDimention,
+body #threeDimention,
+body .element-content h4,
+body .element-content p,
+body footer,
+body .top-footer .footer-menu a:hover,
+body .top-footer .social-media a:hover,
+body .carousel-caption {
   color: #ecebeb;
 }
-
-body p.content, body .dropdown-item {
+body p.content,
+body .dropdown-item {
   color: #323232;
 }
-
 body .main-title {
   font-size: 40px;
 }
-
 body .subtitle {
   font-size: 28px;
 }
-
 body .content {
   font-size: 17px;
 }
-
 body header {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/banner.jpg");
   background-attachment: fixed;
@@ -68,7 +73,6 @@ body header {
   background-size: cover;
   height: 100%;
 }
-
 body header h1.title {
   text-transform: uppercase;
   letter-spacing: 1rem;
@@ -82,7 +86,6 @@ body header h1.title {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-
 body header h1.title:after {
   content: "";
   position: absolute;
@@ -96,11 +99,9 @@ body header h1.title:after {
   height: 3px;
   transition: width 0.5s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
 }
-
 body header h1.title:hover:after {
   width: 100%;
 }
-
 body header p.tagline {
   font-size: 18px;
   letter-spacing: 1px;
@@ -109,29 +110,24 @@ body header p.tagline {
   left: 50%;
   z-index: 2;
   text-transform: uppercase;
-  -moz-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -10px);
+  -webkit-transform: translate(-50%, -10px);
+  transform: translate(-50%, -10px);
 }
-
 body header p.animated {
   animation-delay: 1s;
 }
-
 body header .navbar-brand {
   font-size: 1.7rem;
 }
-
 body header .dropdown-menu {
   background: inherit;
   border: none;
 }
-
 body header .dropdown-menu .dropdown-item:hover {
   color: #ecebeb;
   background: rgba(39, 38, 38, 0.8);
 }
-
 body #introduction .art-definition {
   background: url(../images/Pattern-Randomized.svg);
   background-attachment: fixed;
@@ -140,11 +136,9 @@ body #introduction .art-definition {
   background-size: cover;
   padding: 100px 50px;
 }
-
 body #introduction .art-definition figure img {
   width: 100%;
 }
-
 body #kind {
   background: linear-gradient(rgba(8, 9, 44, 0.8), rgba(8, 9, 44, 0.8)), url("../images/bg-kind.jpg");
   background-attachment: fixed;
@@ -154,28 +148,25 @@ body #kind {
   padding: 70px;
   color: #ecebeb;
 }
-
 body #kind .img-content img {
   width: 150px;
   clip-path: circle(50% at 50% 50%);
 }
-
 body #kind .img-content .btn-kind {
   border: none;
   background: inherit;
   font-size: 24px;
 }
-
-body #kind .img-content #twoDimention, body #kind .img-content #threeDimention, body #kind .img-content #dimentional {
+body #kind .img-content #twoDimention,
+body #kind .img-content #threeDimention,
+body #kind .img-content #dimentional {
   transition: all 1s ease-in-out;
   text-align: left;
 }
-
 body #element {
   padding: 100px 50px;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/point.svg");
 }
-
 body #element .element-box {
   border-width: 3px;
   border-style: solid;
@@ -185,39 +176,32 @@ body #element .element-box {
   height: 250px;
   padding: 20px;
 }
-
-body #element .element-box, body #element h4 {
+body #element .element-box,
+body #element h4 {
   margin-bottom: 30px;
 }
-
 body #artTypes {
   padding: 100px 50px;
   background: url("../images/Endless-Constellation.svg");
 }
-
 body #artTypes .animated {
   animation-duration: 1.5s;
 }
-
 body #artTypes .pure .animated {
   animation-delay: 0.5s;
 }
-
 body #artTypes .design .animated {
   animation-delay: 2s;
 }
-
 body #artTypes .craft .animated {
   animation-delay: 3.5s;
 }
-
 body #artTypes .img-gallery .carousel.slide {
   background-image: -webkit-linear-gradient(-39deg, #333333 0%, #333333 50%, #000000 50%, #000000 50%);
   background-image: linear-gradient(-39deg, #333333 0%, #333333 50%, #000000 50%, #000000 50%);
   width: 600px;
   height: 450px;
 }
-
 body #artTypes .img-gallery .carousel-inner .carousel-item img {
   width: 400px;
   height: 400px;
@@ -227,7 +211,6 @@ body #artTypes .img-gallery .carousel-inner .carousel-item img {
   -webkit-transform: translate(26%, 12%);
   transform: translate(26%, 12%);
 }
-
 body #artTypes .img-gallery .carousel-inner .carousel-item .carousel-caption {
   -moz-transform: translate(1%, 50%);
   -webkit-transform: translate(1%, 50%);
@@ -235,35 +218,30 @@ body #artTypes .img-gallery .carousel-inner .carousel-item .carousel-caption {
   font-weight: 600;
   font-size: 1.1rem;
 }
-
 body footer {
   position: relative;
   width: 100%;
 }
-
 body footer .top-footer {
   background: #606060;
   padding: 20px;
 }
-
-body footer .top-footer .footer-menu a, body footer .top-footer .social-media a {
+body footer .top-footer .footer-menu a,
+body footer .top-footer .social-media a {
   color: #bebebe;
 }
-
 body footer .top-footer .footer-menu a {
   margin: 0 15px;
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
 }
-
 body footer .top-footer .social-media a {
   margin: 0 25px;
   font-size: 24px;
   border: 1 solid white;
   border: 50%;
 }
-
 body footer .bottom-footer {
   background: #030303;
   padding: 10px 0;
@@ -272,7 +250,6 @@ body footer .bottom-footer {
 .shrink .animated {
   animation-duration: 1.5s;
 }
-
 .shrink .navbar {
   background: rgba(39, 38, 38, 0.8);
 }
@@ -282,7 +259,6 @@ body footer .bottom-footer {
     height: 310px;
   }
 }
-
 @media only screen and (min-width: 992px) and (max-width: 1023px) {
   body #element .element-box {
     height: 410px;
@@ -301,7 +277,6 @@ body footer .bottom-footer {
     transform: translate(30%, 15%);
   }
 }
-
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   body #element .element-box {
     height: 510px;
@@ -320,14 +295,12 @@ body footer .bottom-footer {
     transform: translate(35%, 20%);
   }
 }
-
 @media only screen and (max-width: 767px) {
   body footer .top-footer .footer-menu a {
     display: block;
     margin: 10px 0;
   }
 }
-
 @media only screen and (min-width: 500px) and (max-width: 767px) {
   body #element .element-box {
     height: 320px;
@@ -342,7 +315,6 @@ body footer .bottom-footer {
     animation-delay: 3.8s;
   }
 }
-
 @media only screen and (min-width: 600px) and (max-width: 700px) {
   body #artTypes .img-gallery {
     -moz-transform: translate(5%, 0);
@@ -363,8 +335,11 @@ body footer .bottom-footer {
     transform: translate(18%, 8%);
   }
 }
-
 @media only screen and (max-width: 599px) {
+  #kind .img-content {
+    margin: 0 10px;
+  }
+
   #artTypes .pure .animated {
     animation-delay: 1.6s;
   }
@@ -375,7 +350,6 @@ body footer .bottom-footer {
     animation-delay: 5s;
   }
 }
-
 @media only screen and (min-width: 500px) and (max-width: 599px) {
   body #artTypes .img-gallery .carousel.slide {
     width: 400px;
@@ -391,7 +365,6 @@ body footer .bottom-footer {
     transform: translate(23%, 15%);
   }
 }
-
 @media only screen and (min-width: 400px) and (max-width: 499px) {
   body #element .element-box {
     height: 280px;
@@ -410,7 +383,6 @@ body footer .bottom-footer {
     transform: translate(35%, 20%);
   }
 }
-
 @media only screen and (max-width: 399px) {
   body #element .element-box {
     height: 270px;

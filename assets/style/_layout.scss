@@ -15,6 +15,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  background-color: $black;
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -31,9 +32,11 @@ body {
 
   .menu a,
   .menu li,
-  #portfolio,
-  #portfolio a {
+  #portfolio {
     color: $light-2;
+  }
+  #portfolio a {
+    color: $white;
   }
   li {
     margin: 0 3px;
@@ -44,6 +47,7 @@ body {
     position: relative;
     height: 100vh;
     width: 100%;
+    border-radius: 0 0 85% 85% / 30%;
     background: linear-gradient($banner, $banner),
       url("../images/Background.jpg");
     background-attachment: fixed;
@@ -158,12 +162,22 @@ body {
     }
   }
   main {
+    .triangle {
+      position: absolute;
+      width: 0;
+      height: 0;
+      color: $banner-2;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 18px solid $light-2;
+      z-index: 0;
+      animation: triangle 36s linear infinite;
+    }
     #portfolio {
       position: relative;
       padding: 50px;
       width: 100%;
       min-height: 100vh;
-      background-color: $black;
       .title {
         h1 {
           color: $white;
@@ -180,11 +194,12 @@ body {
         background: $dark;
         overflow: hidden;
         box-shadow: 1px 1px 5px $light-2;
-        transition: all 0.7s ease-in-out;
+        transition: all 1s ease-in-out;
         &:hover {
-          transform: translateY(-25px);
+          box-shadow: 1px 1px 15px 2px $light-2;
+          transform: scale(1.1);
           .caption {
-            height: 25%;
+            opacity: 1;
           }
         }
         img {
@@ -194,37 +209,20 @@ body {
           position: absolute;
           bottom: 0;
           width: 100%;
-          height: 0;
-          background: $white;
+          height: 100%;
+          background: $banner;
           border-bottom-left-radius: inherit;
           border-bottom-right-radius: inherit;
-          transition: all 1s ease-in-out;
+          transition: all 1.3s ease-in-out;
+          transition-delay: 0.5s;
           z-index: 1;
-          h5 {
+          opacity: 0;
+          h3 {
+            position: absolute;
             letter-spacing: 1.5px;
+            left: 50%;
+            transform: translateX(-50%);
           }
-        }
-      }
-    }
-  }
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  body {
-    header {
-      .introduce-details {
-        transform: translateX(-125%);
-      }
-    }
-  }
-}
-@media only screen and (max-width: 575px) {
-  body {
-    header {
-      .wrapper {
-        padding: 0 10px;
-        .introduce-details {
-          transform: translateX(-150%);
         }
       }
     }
