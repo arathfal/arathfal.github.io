@@ -1,3 +1,7 @@
+$(window).on("load", function () {
+  $(".loader").delay(9000).fadeOut("slow");
+  $("body").delay(350).css({ overflow: "visible" });
+});
 $(document).ready(function () {
   $(".introduce-details").hide();
   $("#aboutBtn").click(function () {

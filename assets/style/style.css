@@ -25,6 +25,27 @@ body {
   overflow-x: hidden;
   overflow-y: scroll;
 }
+body .loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  background: #000000;
+  z-index: 100;
+}
+body .loader .loader-inner {
+  transition: 0.3s ease-out;
+}
+body .loader .loader-inner img {
+  position: absolute;
+  width: 50px;
+  top: 50%;
+  left: 50%;
+  animation: preloader 3s linear infinite;
+  transform: translate(-50%, -50%);
+}
 body .name,
 body .career,
 body .menu a:hover,
@@ -113,7 +134,11 @@ body header .wrapper .introduce-details {
   z-index: 2;
 }
 body header .wrapper .introduce-details .skill {
-  transform: translateX(-5%);
+  transform: translateX(-15px);
+  margin: 10px 0 5px;
+}
+body header .wrapper .introduce-details .skill i {
+  margin: 5px;
 }
 body header .wrapper .introduce-details .social-media a i {
   border-radius: 10px;
@@ -242,6 +267,23 @@ body main #portfolio .card .caption h3 {
   }
   100% {
     transform: translate(0, 0) rotate(0);
+  }
+}
+@keyframes preloader {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
