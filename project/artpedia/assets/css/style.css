@@ -1,6 +1,6 @@
-@import url("../vendor/bootstrap-4.3.1/css/bootstrap.min.css");
-@import url("../vendor/fontawesome/css/all.min.css");
-@import url("../css/animate.css");
+@import url("/vendor/bootstrap-4.3.1/css/bootstrap.min.css");
+@import url("/vendor/fontawesome/css/all.min.css");
+@import url("/vendor/animate.css");
 @font-face {
   font-family: "Inter";
   src: url("/assets/fonts/Inter/Inter.ttf");
@@ -28,10 +28,6 @@ body {
 }
 body .animated {
   animation-duration: 2s;
-}
-body .art-definition .animated,
-body .img-intro .animated {
-  animation-duration: 0.5s;
 }
 body .element-box .animated,
 body .two-D .animated,

@@ -1,3 +1,21 @@
+@keyframes preloader {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 @keyframes triangle {
   0% {
     transform: translate(0, 0) rotate(0);
@@ -31,20 +49,43 @@
   }
 }
 
-@keyframes preloader {
+@keyframes circle {
   0% {
-    opacity: 0;
+    transform: translate(0, 0);
+    border-color: $white;
   }
   25% {
-    opacity: 0.5;
+    transform: translate(-300px, 0);
+    border-color: $light-2;
   }
   50% {
-    opacity: 1;
+    transform: translate(-300px, 300px);
+    border-color: $dark;
   }
   75% {
-    opacity: 0.5;
+    transform: translate(-100px, 300px);
+    border-color: $light-2;
   }
   100% {
-    opacity: 0;
+    transform: translate(0, 0);
+    border-color: $white;
+  }
+}
+
+@keyframes windmill {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

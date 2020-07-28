@@ -70,7 +70,6 @@ body {
     position: relative;
     height: 100vh;
     width: 100%;
-    border-radius: 0 0 85% 85% / 30%;
     background: linear-gradient($banner, $banner),
       url("../images/Background.jpg");
     background-attachment: fixed;
@@ -104,11 +103,6 @@ body {
           border: 3px solid $white;
           border-radius: 50%;
           transition: all 1s ease-in-out;
-          &:hover {
-            filter: grayscale(0) brightness(110%);
-            transform: scale(1.2);
-            border: none;
-          }
         }
         .name {
           font-weight: 700;
@@ -131,6 +125,9 @@ body {
         width: 100%;
         height: auto;
         z-index: 2;
+        .about {
+          line-height: 2rem;
+        }
 
         .skill {
           transform: translateX(-15px);
@@ -190,6 +187,7 @@ body {
   main {
     .triangle {
       position: absolute;
+      left: 35%;
       width: 0;
       height: 0;
       color: $banner-2;
@@ -197,7 +195,38 @@ body {
       border-right: 10px solid transparent;
       border-bottom: 18px solid $light-2;
       z-index: 0;
-      animation: triangle 36s linear infinite;
+      animation: triangle 40s linear infinite;
+    }
+    .circle {
+      position: absolute;
+      top: 10%;
+      left: 90%;
+      width: 15px;
+      height: 15px;
+      background: unset;
+      border: 1.5px solid $white;
+      border-radius: 50%;
+      z-index: 0;
+      animation: circle 36s linear infinite;
+      opacity: 1;
+    }
+    .windmill {
+      position: absolute;
+      width: 3px;
+      height: 18px;
+      border-radius: 20px;
+      background: $light-2;
+      z-index: 0;
+      animation: windmill 3s linear infinite;
+      &:after {
+        content: "";
+        position: inherit;
+        width: inherit;
+        height: inherit;
+        background: inherit;
+        border-radius: inherit;
+        transform: rotate(90deg);
+      }
     }
     #portfolio {
       position: relative;
