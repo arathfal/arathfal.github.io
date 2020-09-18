@@ -21,28 +21,28 @@
     transform: translate(0, 0) rotate(0);
   }
   20% {
-    transform: translate(50px, 50px) rotate(0);
+    transform: translate(60px, 60px) rotate(0);
   }
   30% {
-    transform: translate(100px, 100px) rotate(45deg);
+    transform: translate(120px, 120px) rotate(45deg);
   }
   40% {
-    transform: translate(150px, 150px) rotate(90deg);
+    transform: translate(180px, 180px) rotate(90deg);
   }
   50% {
-    transform: translate(100px, 150px) rotate(115deg);
+    transform: translate(120px, 180px) rotate(115deg);
   }
   60% {
-    transform: translate(50px, 150px) rotate(180deg);
+    transform: translate(60px, 180px) rotate(180deg);
   }
   70% {
-    transform: translate(0, 150px) rotate(225deg);
+    transform: translate(0, 180px) rotate(225deg);
   }
   80% {
-    transform: translate(0, 100px) rotate(270deg);
+    transform: translate(0, 120px) rotate(270deg);
   }
   90% {
-    transform: translate(0, 50px) rotate(315deg);
+    transform: translate(0, 60px) rotate(315deg);
   }
   100% {
     transform: translate(0, 0) rotate(359deg);
@@ -55,15 +55,15 @@
     border-color: $white;
   }
   25% {
-    transform: translate(-75px, 0);
+    transform: translate(-100px, 0);
     border-color: $light-2;
   }
   50% {
-    transform: translate(-75px, 75px);
+    transform: translate(-100px, 100px);
     border-color: $dark;
   }
   75% {
-    transform: translate(-10px, 75px);
+    transform: translate(-50px, 100px);
     border-color: $light-2;
   }
   100% {
@@ -77,15 +77,15 @@
     border-color: $white;
   }
   25% {
-    transform: translate(-75px, 0);
+    transform: translate(-100px, 0);
     border-color: $light-2;
   }
   50% {
-    transform: translate(-75px, 75px);
+    transform: translate(-100px, 100px);
     border-color: $dark;
   }
   75% {
-    transform: translate(-10px, 75px);
+    transform: translate(-50px, 100px);
     border-color: $light-2;
   }
   100% {

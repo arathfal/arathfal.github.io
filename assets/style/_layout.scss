@@ -195,7 +195,7 @@ body {
       border-right: 10px solid transparent;
       border-bottom: 18px solid $light-2;
       z-index: 0;
-      animation: triangle 40s linear infinite;
+      animation: triangle 15s linear infinite;
     }
     .circle {
       position: absolute;
@@ -207,7 +207,7 @@ body {
       border: 1.5px solid $white;
       border-radius: 50%;
       z-index: 0;
-      animation: circle 36s linear infinite;
+      animation: circle 15s linear infinite;
       opacity: 1;
     }
     .circle-1 {
@@ -220,7 +220,7 @@ body {
       border: 1.5px solid $white;
       border-radius: 50%;
       z-index: 0;
-      animation: circle-1 36s linear infinite;
+      animation: circle-1 15s linear infinite;
       opacity: 1;
     }
     .windmill {
