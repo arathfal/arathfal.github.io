@@ -210,6 +210,19 @@ body {
       animation: circle 36s linear infinite;
       opacity: 1;
     }
+    .circle-1 {
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      width: 15px;
+      height: 15px;
+      background: $light-1;
+      border: 1.5px solid $white;
+      border-radius: 50%;
+      z-index: 0;
+      animation: circle-1 36s linear infinite;
+      opacity: 1;
+    }
     .windmill {
       position: absolute;
       width: 3px;

@@ -196,6 +196,19 @@ body main .circle {
   animation: circle 36s linear infinite;
   opacity: 1;
 }
+body main .circle-1 {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  background: #c5c5c5;
+  border: 1.5px solid #ffffff;
+  border-radius: 50%;
+  z-index: 0;
+  animation: circle-1 36s linear infinite;
+  opacity: 1;
+}
 body main .windmill {
   position: absolute;
   width: 3px;
@@ -321,15 +334,37 @@ body main #portfolio .card .caption h3 {
     border-color: #ffffff;
   }
   25% {
-    transform: translate(-300px, 0);
+    transform: translate(-75px, 0);
     border-color: #8d8d8d;
   }
   50% {
-    transform: translate(-300px, 300px);
+    transform: translate(-75px, 75px);
     border-color: #141414;
   }
   75% {
-    transform: translate(-100px, 300px);
+    transform: translate(-10px, 75px);
+    border-color: #8d8d8d;
+  }
+  100% {
+    transform: translate(0, 0);
+    border-color: #ffffff;
+  }
+}
+@keyframes circle-1 {
+  0% {
+    transform: translate(0, 0);
+    border-color: #ffffff;
+  }
+  25% {
+    transform: translate(-75px, 0);
+    border-color: #8d8d8d;
+  }
+  50% {
+    transform: translate(-75px, 75px);
+    border-color: #141414;
+  }
+  75% {
+    transform: translate(-10px, 75px);
     border-color: #8d8d8d;
   }
   100% {

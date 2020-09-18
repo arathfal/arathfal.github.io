@@ -55,15 +55,37 @@
     border-color: $white;
   }
   25% {
-    transform: translate(-300px, 0);
+    transform: translate(-75px, 0);
     border-color: $light-2;
   }
   50% {
-    transform: translate(-300px, 300px);
+    transform: translate(-75px, 75px);
     border-color: $dark;
   }
   75% {
-    transform: translate(-100px, 300px);
+    transform: translate(-10px, 75px);
+    border-color: $light-2;
+  }
+  100% {
+    transform: translate(0, 0);
+    border-color: $white;
+  }
+}
+@keyframes circle-1 {
+  0% {
+    transform: translate(0, 0);
+    border-color: $white;
+  }
+  25% {
+    transform: translate(-75px, 0);
+    border-color: $light-2;
+  }
+  50% {
+    transform: translate(-75px, 75px);
+    border-color: $dark;
+  }
+  75% {
+    transform: translate(-10px, 75px);
     border-color: $light-2;
   }
   100% {
