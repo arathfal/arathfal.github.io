@@ -301,28 +301,28 @@ body main #portfolio .card .caption h3 {
     transform: translate(0, 0) rotate(0);
   }
   20% {
-    transform: translate(150px, 150px) rotate(0);
+    transform: translate(50px, 50px) rotate(0);
   }
   30% {
-    transform: translate(300px, 300px) rotate(45deg);
+    transform: translate(100px, 100px) rotate(45deg);
   }
   40% {
-    transform: translate(450px, 450px) rotate(90deg);
+    transform: translate(150px, 150px) rotate(90deg);
   }
   50% {
-    transform: translate(300px, 450px) rotate(135deg);
+    transform: translate(100px, 150px) rotate(115deg);
   }
   60% {
-    transform: translate(150px, 450px) rotate(180deg);
+    transform: translate(50px, 150px) rotate(180deg);
   }
   70% {
-    transform: translate(0, 450px) rotate(225deg);
+    transform: translate(0, 150px) rotate(225deg);
   }
   80% {
-    transform: translate(0, 300px) rotate(270deg);
+    transform: translate(0, 100px) rotate(270deg);
   }
   90% {
-    transform: translate(0, 150px) rotate(315deg);
+    transform: translate(0, 50px) rotate(315deg);
   }
   100% {
     transform: translate(0, 0) rotate(359deg);
@@ -386,7 +386,7 @@ body main #portfolio .card .caption h3 {
     transform: rotate(270deg);
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(359deg);
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
