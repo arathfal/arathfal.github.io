@@ -41,6 +41,13 @@
     padding-right: 5.563rem;
     padding-left: 5.563rem;
   }
+  #article {
+    padding-right: 4rem;
+    padding-left: 4rem;
+    .article-container {
+      grid-template-columns: repeat(2, 260px);
+    }
+  }
 }
 
 @media (min-width: $dekstop) {
@@ -75,11 +82,23 @@
     padding-right: 14rem;
     padding-left: 14rem;
   }
+  #article {
+    padding-right: 5.938rem;
+    padding-left: 5.938rem;
+    .article-container {
+      grid-template-columns: repeat(3, 260px);
+    }
+  }
 }
 
 @media (min-width: $pc) {
   #about {
     padding-right: 16.875rem;
     padding-left: 16.875rem;
+  }
+  #article {
+    .article-container {
+      grid-template-columns: repeat(4, 260px);
+    }
   }
 }

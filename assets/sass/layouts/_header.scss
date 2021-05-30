@@ -86,7 +86,9 @@ header {
         &:hover {
           color: $light-3;
         }
-        &.active {
+      }
+      &.active {
+        .navbar-link {
           color: $pinky-fresh;
         }
       }

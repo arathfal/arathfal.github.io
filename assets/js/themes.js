@@ -109,5 +109,43 @@ const handleNavbar = () => {
   };
 };
 
+const makeNavLinksSmooth = () => {
+  const navLinks = document.querySelectorAll(".navbar-link");
+
+  for (let nav in navLinks) {
+    if (navLinks.hasOwnProperty(nav)) {
+      navLinks[nav].addEventListener("click", (e) => {
+        e.preventDefault();
+        document.querySelector(navLinks[nav].hash).scrollIntoView({
+          behavior: "smooth",
+        });
+      });
+    }
+  }
+};
+
+const spyScrolling = () => {
+  const sections = document.querySelectorAll(".scrollspy");
+
+  window.onscroll = () => {
+    const scrollPos =
+      document.documentElement.scrollTop || document.body.scrollTop;
+
+    for (let secs in sections)
+      if (
+        sections.hasOwnProperty(secs) &&
+        sections[secs].offsetTop <= scrollPos
+      ) {
+        const id = sections[secs].id;
+        document.querySelector(".active").classList.remove("active");
+        document
+          .querySelector(`a[href*=${id}]`)
+          .parentNode.classList.add("active");
+      }
+  };
+};
+
+makeNavLinksSmooth();
+spyScrolling();
 space();
 handleNavbar();
