@@ -13,3 +13,90 @@
     box-shadow: 0 0 0 2px #4932d8;
   }
 }
+
+.title-section {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: $light-1;
+  text-align: center;
+  margin-bottom: 5rem;
+  span {
+    font-weight: 700;
+    color: $pinky-fresh;
+  }
+}
+
+#about {
+  background: $dark-2;
+
+  .about-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 127px 0;
+
+    .about-personal {
+      text-align: center;
+      figure {
+        position: relative;
+        left: 50%;
+        width: 10rem;
+        height: 10rem;
+        border: 3px solid $light-1;
+        border-radius: 50%;
+        margin-bottom: 1.75rem;
+        transform: translateX(-50%);
+        img {
+          width: 100%;
+          height: 100%;
+          clip-path: circle(50% at 50% 50%);
+        }
+      }
+      .about-personal-description {
+        color: $light-1;
+        font-weight: 600;
+      }
+      .about-skill {
+        i {
+          font-size: 25px;
+          color: $light-1;
+          margin: 0 0.625rem;
+          &:first-child {
+            margin-left: 0;
+          }
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    .about-work {
+      .about-work-spesification {
+        margin-bottom: 2.5rem;
+        .circle-icons {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          background: $light-1;
+          margin-right: 1.25rem;
+        }
+        .spesification-header {
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+          margin-bottom: 11px;
+          .spesification-title {
+            color: $light-1;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+    .about-text {
+      color: $light-2;
+      font-size: 0.875rem;
+    }
+  }
+}

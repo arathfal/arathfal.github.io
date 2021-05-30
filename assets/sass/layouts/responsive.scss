@@ -1,10 +1,52 @@
 @media (min-width: $mobile) {
+  header {
+    .header-caption {
+      left: 50%;
+      width: auto;
+      text-align: center;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      .header-caption-text {
+        font-size: 1.5rem;
+      }
+    }
+  }
 }
 
 @media (min-width: $tablet) {
+  header {
+    .header-caption {
+      .header-caption-text {
+        font-size: 1.75rem;
+      }
+    }
+  }
+  #about {
+    padding-right: 12rem;
+    padding-left: 12rem;
+    .about-container {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-gap: 0 127px;
+      .about-personal {
+        text-align: left;
+        figure {
+          left: 0;
+          transform: translateX(0);
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: $dekstop) {
+  header {
+    .header-caption {
+      .header-caption-text {
+        font-size: 2.25rem;
+      }
+    }
+  }
   .navbar {
     .navbar-list {
       position: relative;
@@ -25,7 +67,15 @@
       display: none;
     }
   }
+  #about {
+    padding-right: 14rem;
+    padding-left: 14rem;
+  }
 }
 
 @media (min-width: $pc) {
+  #about {
+    padding-right: 16.875rem;
+    padding-left: 16.875rem;
+  }
 }

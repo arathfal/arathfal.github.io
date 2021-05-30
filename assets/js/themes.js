@@ -88,13 +88,18 @@ const space = () => {
 };
 const handleNavbar = () => {
   const toggler = document.querySelector(".navbar-toggle");
-  const navbar = document.querySelector(".navbar-list");
-  navbar.classList.add("hide");
+  const navbar = document.querySelector(".navbar");
+  const navList = document.querySelector(".navbar-list");
+
+  navList.classList.add("hide");
 
   toggler.addEventListener("click", (e) => {
     e.preventDefault();
-    navbar.classList.toggle("show");
+    navList.classList.toggle("show");
   });
+  navbar.scrollY === 0
+    ? navbar.classList.add("shadow")
+    : navbar.classList.remove("shadow");
 };
 
 space();
