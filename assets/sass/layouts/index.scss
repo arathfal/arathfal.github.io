@@ -1,0 +1,15 @@
+.button-blue {
+  width: auto;
+  height: auto;
+  padding: 10px 30px;
+  background: $daylight-blue;
+  color: $light-1;
+  text-align: center;
+  border-radius: 5px;
+  &:hover {
+    background: #0f78c3;
+  }
+  &:focus {
+    box-shadow: 0 0 0 2px #4932d8;
+  }
+}

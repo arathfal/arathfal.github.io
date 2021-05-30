@@ -1,137 +1,66 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/style/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link
       rel="shortcut icon"
-      href="assets/images/Ara Logo.png"
+      href="assets/images/favicon.ico"
       type="image/x-icon"
     />
-    <title>Aradea Athfal</title>
+    <link rel="stylesheet" href="assets/css/styles.min.css" />
+    <title>Aradea Atfal</title>
   </head>
   <body>
     <header>
-      <div class="loader">
-        <span class="loader-inner">
-          <img src="assets/images/Ara Logo.png" alt="">
-        </span>
-      </div>
-      <div class="wrapper">
-        <div class="h-100">
-          <div class="introduce text-center">
-            <img src="assets/images/Foto.jpg" class="" />
-            <h2 class="name mt-5">Aradea Athfal</h2>
-            <h6 class="career mb-4">Web Developer</h6>
-            <ul class="menu">
-              <li><a id="aboutBtn" href="#introduceDetails" role="button" data-target="#introduceDetails">About</a></li>
-              <li>|</li>
-              <li><a href="#portfolio">Portfolio</a></li>
-            </ul>
-          </div>
-          <div id="introduceDetails" class="col-sm-8 col-md-6 h-100 d-flex align-items-center">
-            <div class="introduce-details text-center">
-              <button type="button" class="close" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-              <p class="about text-left">
-                <strong>Hello,</strong><br />
-                My name is Aradea Athfal, you can call me Ara. I'm student at
-                Islamic University of Maulana Malik Ibrahim Malang. <br>
-                I make a full responsive and beautiful website design.
-              </p>
-              <h6 class="mt-3"><strong>Skill</strong></h6>
-              <ul class="skill">
-                <li>
-                  <i class="fab fa-html5 fa-lg"></i>
-                </li>
-                <li>
-                  <i class="fab fa-css3-alt fa-lg"></i>
-                </li>
-                <li>
-                  <i class="fab fa-js fa-lg"></i>
-                </li>
-                <li>
-                  <i class="fab fa-sass fa-lg"></i>
-                </li>
-                <li>
-                  <i class="fab fa-bootstrap fa-lg"></i>
-                </li>
-                <li>
-                  <i class="fab fa-node-js fa-lg"></i>
-                </li>
-              </ul>
-              <h6 class="mt-3"><strong>Find me</strong></h6>
-              <div class="social-media">
-                <li><a
-                  href="https://bit.ly/2REt7tS" target="_blank"
-                  ><i class="fab fa-whatsapp fa-2x"></i
-                ></a></li>
-                <li><a href="https://bit.ly/3my4OMA" target="_blank"
-                  ><i class="fab fa-facebook fa-2x"></i
-                ></a></li>
-                <li><a href="https://bit.ly/3iH961Z" target="_blank"
-                  ><i class="fab fa-instagram fa-2x"></i
-                ></a></li>
-                <li><a href="https://bit.ly/3hFl9vd" target="_blank"
-                  ><i class="fab fa-github fa-2x"></i
-                ></a></li>
-                <li><a href="https://bit.ly/2EbRVGC" target="_blank"
-                  ><i class="fab fa-gitlab fa-2x"></i
-                ></a></li>
-                <li><a href="https://bit.ly/2EbRVGC" target="_blank"
-                  ><i class="fab fa-linkedin fa-2x"></i
-                ></a></li>
-              </div>
-          </div>
-        </div>
+      <canvas id="space"></canvas>
+      <div class="header-caption">
+        <h1 class="header-caption-text mb-12">
+          Hello, I'm <span>Aradea Atfal</span>
+        </h1>
+        <h1 class="header-caption-text mb-40">I'm Front-End Web Developer</h1>
+        <a href="">
+          <button class="button-blue">Explore My Work</button>
+        </a>
       </div>
     </header>
     <main>
-      <article id="portfolio" >
-        <span class="triangle"></span>
-        <span class="circle"></span>
-        <span class="circle-1"></span>
-        <span class="windmill"></span>
-        <div class="title text-center mb-50">
-          <h1>Latest <strong>Work</strong></h1>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 col-md-6 col-lg-4 mb-5">
-            <a href="https://citiplanindonesia.com/" target="_blank">
-              <div class="card text-center">
-                <img src="project/cover/citiplan.png" class="img-fluid">
-                <div class="caption d-flex align-items-center">
-                  <h3><strong>Citiplan Indonesia</strong></h3>
-                </div>
-              </div>
-            </a>  
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4 mb-5">
-            <a href="https://doolen.co.id/" target="_blank">
-              <div class="card text-center">
-                <img src="project/cover/doolen.png" class="img-fluid">
-                <div class="caption d-flex align-items-center">
-                  <h3><strong>Doolen</strong></h3>
-                </div>
-              </div>
-            </a>  
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4 mb-5">
-            <a href="/project/artpedia/" target="_blank">
-              <div class="card text-center">
-                <img src="project/cover/artpedia.png" class="img-fluid">
-                <div class="caption d-flex align-items-center">
-                  <h3><strong>Artpedia</strong></h3>
-                </div>
-              </div>
-            </a>  
-          </div>
-        </div>
-      </article>
+      <nav class="navbar">
+        <a href="" class="brand">
+          <figure>
+            <img src="assets/images/black logo.png" alt="Aradea Atfal" />
+          </figure>
+        </a>
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a href="" class="navbar-link active">Home</a>
+          </li>
+          <li class="navbar-item">
+            <a href="" class="navbar-link">About</a>
+          </li>
+          <li class="navbar-item">
+            <a href="" class="navbar-link">Project</a>
+          </li>
+          <li class="navbar-item">
+            <a href="" class="navbar-link">Article</a>
+          </li>
+          <li class="navbar-item">
+            <a href="" class="navbar-link">Contact</a>
+          </li>
+        </ul>
+        <button class="navbar-toggle">
+          <i class="fa-lg fas fa-bars"></i>
+        </button>
+      </nav>
     </main>
-    <script src="vendor/jquery 3.4.1/jquery-3.4.1.min.js"></script>
-    <script src="vendor/bootstrap-4.3.1/js/bootstrap.min.js"></script>
-    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/themes.js"></script>
   </body>
 </html>

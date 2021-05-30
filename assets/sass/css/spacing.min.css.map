@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,MAAM,AAAC,CACL,aAAa,CAAE,OAAO,CACvB,AACD,AAAA,MAAM,AAAC,CACL,aAAa,CAAE,MAAM,CACtB",
+    "sources": [
+        "../base/spacing.scss"
+    ],
+    "names": [],
+    "file": "spacing.min.css"
+}
