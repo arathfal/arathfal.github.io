@@ -29,12 +29,17 @@ header {
 }
 .navbar {
   position: sticky;
+  position: -webkit-sticky;
+  top: 0;
   display: flex;
   align-items: center;
   width: 100%;
   height: 80px;
   background: $dark-1;
   z-index: 2;
+  &.shadow {
+    box-shadow: 0 0 8px 0 #fff;
+  }
 
   .brand {
     position: absolute;
@@ -55,7 +60,7 @@ header {
   }
 
   .navbar-list {
-    position: fixed;
+    position: absolute;
     top: 80px;
     background: $dark-1;
     padding: 1rem 2rem;

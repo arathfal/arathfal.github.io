@@ -87,19 +87,26 @@ const space = () => {
   executeFrame();
 };
 const handleNavbar = () => {
-  const toggler = document.querySelector(".navbar-toggle");
-  const navbar = document.querySelector(".navbar");
-  const navList = document.querySelector(".navbar-list");
+  const toggler = document.querySelector(".navbar-toggle"),
+    icons = document.querySelector(".navbar-toggle .fa-bars");
+  navbar = document.querySelector("nav");
+  navList = document.querySelector(".navbar-list");
 
   navList.classList.add("hide");
 
   toggler.addEventListener("click", (e) => {
     e.preventDefault();
     navList.classList.toggle("show");
+    icons.classList.toggle("fa-times");
   });
-  navbar.scrollY === 0
-    ? navbar.classList.add("shadow")
-    : navbar.classList.remove("shadow");
+
+  window.onscroll = () => {
+    navbar.classList.remove("shadow");
+
+    navbar.offsetTop === 0
+      ? navbar.classList.remove("shadow")
+      : navbar.classList.add("shadow");
+  };
 };
 
 space();

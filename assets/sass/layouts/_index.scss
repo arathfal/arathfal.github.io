@@ -14,6 +14,24 @@
   }
 }
 
+.button-pinky {
+  width: auto;
+  height: auto;
+  padding: 10px 30px;
+  background: $pinky-fresh;
+  color: $light-1;
+  text-align: center;
+  border-radius: 5px;
+  border: 2px solid $light-1;
+  &:hover {
+    background: $light-1;
+    color: $pinky-fresh;
+  }
+  &:focus {
+    box-shadow: 0 0 0 2px #be6686;
+  }
+}
+
 .title-section {
   font-size: 2.5rem;
   font-weight: 600;
@@ -97,6 +115,80 @@
     .about-text {
       color: $light-2;
       font-size: 0.875rem;
+    }
+  }
+}
+
+#portfolio {
+  background: $dark-3;
+  .portfolio-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: 242px;
+    grid-auto-flow: dense;
+
+    .portfolio-item {
+      position: relative;
+      img {
+        width: 100%;
+        height: 242px;
+        object-fit: cover;
+      }
+
+      .card {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        transition: 0.3s;
+        z-index: 1;
+      }
+      .portfolio-caption {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        transition: top 0.5s;
+        opacity: 0;
+        z-index: 2;
+        .portfolio-title {
+          font-size: 1.5rem;
+          font-weight: 600;
+          color: $light-1;
+          margin-bottom: 10px;
+        }
+        .language {
+          color: $dark-1;
+        }
+        .portfolio-title,
+        .language {
+          text-align: center;
+        }
+      }
+      .button-pinky {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transition: all 0.5s;
+        transform: translateX(-50%);
+        opacity: 0;
+        z-index: 2;
+      }
+      &:hover {
+        .card {
+          background: $pinky-fresh;
+        }
+        .portfolio-caption {
+          top: 18%;
+          opacity: 1;
+        }
+        .button-pinky {
+          bottom: 18%;
+          opacity: 1;
+        }
+      }
     }
   }
 }
