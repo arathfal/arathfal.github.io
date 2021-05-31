@@ -204,6 +204,9 @@
   .subtitle-section {
     text-align: left;
   }
+  .title-section {
+    font-size: 1.8rem;
+  }
 
   .article-container {
     display: grid;
@@ -238,6 +241,46 @@
         color: $light-2;
         font-size: 0.875rem;
       }
+    }
+  }
+}
+
+#contact {
+  background: $dark-3;
+  .title-section {
+    font-size: 1.8rem;
+  }
+  form {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    input,
+    textarea {
+      width: 100%;
+      color: $light-1;
+      background: $dark-1;
+      padding: 0.75rem 1rem;
+      border: none;
+      border-radius: 5px;
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px $light-3;
+      }
+      &::placeholder {
+        color: $light-3;
+      }
+    }
+    input {
+      height: 2.5rem;
+      margin-bottom: 4px;
+    }
+    textarea {
+      height: 6.25rem;
+      margin-bottom: 1rem;
+    }
+    .right {
+      display: flex;
+      justify-content: flex-end;
     }
   }
 }

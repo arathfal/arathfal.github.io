@@ -34,10 +34,11 @@ header {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 80px;
+  height: 50px;
   background: $dark-1;
   z-index: 2;
   &.shadow {
+    animation: down 1s ease-in-out 1;
     box-shadow: 0 0 8px 0 #fff;
   }
 
@@ -49,19 +50,19 @@ header {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 80px;
-      height: 80px;
+      width: 50px;
+      height: 50px;
       background: $light-1;
       img {
         width: auto;
-        height: 50px;
+        height: 30px;
       }
     }
   }
 
   .navbar-list {
     position: absolute;
-    top: 80px;
+    top: 50px;
     background: $dark-1;
     padding: 1rem 2rem;
     border-bottom: 1px solid $light-1;
@@ -109,5 +110,14 @@ header {
     &:focus {
       border: 1px solid $light-1;
     }
+  }
+}
+
+@keyframes down {
+  0% {
+    transform: translateY(-5rem);
+  }
+  100% {
+    transform: translateY(0);
   }
 }

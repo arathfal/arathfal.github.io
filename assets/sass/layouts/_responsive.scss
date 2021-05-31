@@ -11,6 +11,27 @@
       }
     }
   }
+  .navbar {
+    height: 60px;
+
+    .brand {
+      figure {
+        width: 60px;
+        height: 60px;
+        img {
+          height: 35px;
+        }
+      }
+    }
+    .navbar-list {
+      top: 60px;
+    }
+  }
+  #contact {
+    form {
+      width: 25rem;
+    }
+  }
 }
 
 @media (min-width: $tablet) {
@@ -19,6 +40,22 @@
       .header-caption-text {
         font-size: 1.75rem;
       }
+    }
+  }
+  .navbar {
+    height: 65px;
+
+    .brand {
+      figure {
+        width: 65px;
+        height: 65px;
+        img {
+          height: 40px;
+        }
+      }
+    }
+    .navbar-list {
+      top: 65px;
     }
   }
   #about {
@@ -44,8 +81,34 @@
   #article {
     padding-right: 4rem;
     padding-left: 4rem;
+    .title-section {
+      font-size: 2.1rem;
+    }
     .article-container {
       grid-template-columns: repeat(2, 260px);
+    }
+  }
+  #contact {
+    .title-section {
+      font-size: 2.1rem;
+    }
+    form {
+      width: 27rem;
+    }
+  }
+  footer {
+    .social-media {
+      .social-media-list {
+        .social-media-item {
+          width: 3.75rem;
+          height: 3.75rem;
+          a {
+            i {
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -58,7 +121,19 @@
       }
     }
   }
+
   .navbar {
+    height: 75px;
+
+    .brand {
+      figure {
+        width: 75px;
+        height: 75px;
+        img {
+          height: 45px;
+        }
+      }
+    }
     .navbar-list {
       position: relative;
       top: 0;
@@ -85,13 +160,37 @@
   #article {
     padding-right: 5.938rem;
     padding-left: 5.938rem;
+    .title-section {
+      font-size: 2.3rem;
+    }
     .article-container {
       grid-template-columns: repeat(3, 260px);
+    }
+  }
+  #contact {
+    .title-section {
+      font-size: 2.3rem;
+    }
+    form {
+      width: 30rem;
     }
   }
 }
 
 @media (min-width: $pc) {
+  .navbar {
+    height: 80px;
+
+    .brand {
+      figure {
+        width: 80px;
+        height: 80px;
+        img {
+          height: 50px;
+        }
+      }
+    }
+  }
   #about {
     padding-right: 16.875rem;
     padding-left: 16.875rem;

@@ -101,9 +101,7 @@ const handleNavbar = () => {
   });
 
   window.onscroll = () => {
-    navbar.classList.remove("shadow");
-
-    navbar.offsetTop === 0
+    navbar.offsetTop < 10
       ? navbar.classList.remove("shadow")
       : navbar.classList.add("shadow");
   };
@@ -144,6 +142,17 @@ const spyScrolling = () => {
       }
   };
 };
+
+const scrollToTopBtn = document.querySelector(".scroll-up");
+const rootElement = document.documentElement;
+
+const scrollToTop = () => {
+  rootElement.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
+scrollToTopBtn.addEventListener("click", scrollToTop);
 
 makeNavLinksSmooth();
 spyScrolling();
