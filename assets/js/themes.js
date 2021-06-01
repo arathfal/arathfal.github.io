@@ -88,11 +88,21 @@ const space = () => {
 };
 const handleNavbar = () => {
   const toggler = document.querySelector(".navbar-toggle"),
-    icons = document.querySelector(".navbar-toggle .fa-bars");
-  navbar = document.querySelector("nav");
-  navList = document.querySelector(".navbar-list");
+    icons = document.querySelector(".navbar-toggle .fa-bars"),
+    navbar = document.querySelector("nav"),
+    navList = document.querySelector(".navbar-list"),
+    menuSection = document.querySelectorAll("nav li"),
+    mainSection = document.querySelectorAll(".scrollspy");
 
-  navList.classList.add("hide");
+  // for clickable event
+  menuSection.forEach((v) => {
+    v.onclick = () => {
+      setTimeout(() => {
+        menuSection.forEach((j) => j.classList.remove("active"));
+        v.classList.add("active");
+      }, 300);
+    };
+  });
 
   toggler.addEventListener("click", (e) => {
     e.preventDefault();
@@ -104,42 +114,13 @@ const handleNavbar = () => {
     navbar.offsetTop < 10
       ? navbar.classList.remove("shadow")
       : navbar.classList.add("shadow");
-  };
-};
-
-const makeNavLinksSmooth = () => {
-  const navLinks = document.querySelectorAll(".navbar-link");
-
-  for (let nav in navLinks) {
-    if (navLinks.hasOwnProperty(nav)) {
-      navLinks[nav].addEventListener("click", (e) => {
-        e.preventDefault();
-        document.querySelector(navLinks[nav].hash).scrollIntoView({
-          behavior: "smooth",
-        });
-      });
-    }
-  }
-};
-
-const spyScrolling = () => {
-  const sections = document.querySelectorAll(".scrollspy");
-
-  window.onscroll = () => {
-    const scrollPos =
-      document.documentElement.scrollTop || document.body.scrollTop;
-
-    for (let secs in sections)
-      if (
-        sections.hasOwnProperty(secs) &&
-        sections[secs].offsetTop <= scrollPos
-      ) {
-        const id = sections[secs].id;
-        document.querySelector(".active").classList.remove("active");
-        document
-          .querySelector(`a[href*=${id}]`)
-          .parentNode.classList.add("active");
+    mainSection.forEach((v, i) => {
+      let rect = v.getBoundingClientRect().y;
+      if (rect < window.innerHeight - 600) {
+        menuSection.forEach((v) => v.classList.remove("active"));
+        menuSection[i].classList.add("active");
       }
+    });
   };
 };
 
@@ -154,7 +135,5 @@ const scrollToTop = () => {
 };
 scrollToTopBtn.addEventListener("click", scrollToTop);
 
-makeNavLinksSmooth();
-spyScrolling();
 space();
 handleNavbar();

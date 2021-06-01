@@ -36,7 +36,7 @@ header {
   width: 100%;
   height: 50px;
   background: $dark-1;
-  z-index: 2;
+  z-index: 9;
   &.shadow {
     animation: down 1s ease-in-out 1;
     box-shadow: 0 0 8px 0 #fff;
@@ -67,6 +67,7 @@ header {
     padding: 1rem 2rem;
     border-bottom: 1px solid $light-1;
     transition: 0.5s;
+    z-index: 10;
     &.hide {
       left: -1000px;
       opacity: 0;
