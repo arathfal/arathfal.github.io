@@ -104,6 +104,8 @@ const handleNavbar = () => {
     };
   });
 
+  navList.classList.toggle("hide");
+
   toggler.addEventListener("click", (e) => {
     e.preventDefault();
     navList.classList.toggle("show");
