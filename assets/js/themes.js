@@ -135,6 +135,37 @@ scrollToTopBtn.addEventListener('click', scrollToTop);
 const handleProject = () => {
   const items = [
     {
+      title: 'Shipper 360',
+      language: 'NextJS / GraphQL / Jest',
+      image: 'assets/images/Portfolio/Shipper 360.jpg',
+      url: 'https://mitra.shipper.id/#/login',
+    },
+    {
+      title: 'Shipper Dashboard',
+      language: 'NextJS / GraphQL / Jest',
+      image: 'assets/images/Portfolio/Shipper BOS.jpg',
+      url: 'https://dashboard.shipper.id/login',
+    },
+    {
+      title: 'Shipper HQ',
+      language: 'ReactJS / GraphQL / Jest',
+      image: 'assets/images/Portfolio/Shipper HQ.jpg',
+      url: 'https://mitra.shipper.id/#/login',
+    },
+    {
+      title: 'AvidX - Practice',
+      language: 'ReactJS / Axios',
+      image: 'assets/images/Portfolio/AvidX - Practice.jpg',
+      url: 'https://practice.avidx.app/login',
+    },
+    {
+      title: 'AvidX',
+      language: 'HTML / Tailwind / Javascript',
+      image: 'assets/images/Portfolio/AvidX - Profile.jpg',
+      url: 'https://www.avidx.app/index.html',
+    },
+    
+    {
       title: 'Vita School',
       language: 'HTML / CSS / Javascript',
       image: 'assets/images/Portfolio/vita-school.png',
@@ -190,7 +221,7 @@ const handleProject = () => {
             <h5 class="portfolio-title">${val.title}</h5>
             <p class="language">${val.language}</p>
           </div>
-          <a href="${val.url}">
+          <a href="${val.url}" target="_blank">
             <button class="button-pinky">Learn More</button>
           </a>
         </div>
