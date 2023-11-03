@@ -199,7 +199,7 @@ const handleProject = () => {
       title: 'Doolen',
       language: 'HTML / CSS / Javascript',
       image: 'assets/images/Portfolio/doolen.jpg',
-      url: 'https://ar.com',
+      url: 'https://doolen.com/',
     },
     {
       title: 'Artpedia',
