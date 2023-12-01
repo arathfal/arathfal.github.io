@@ -1,113 +1,37 @@
 @media (min-width: $mobile) {
   header {
-    .header-caption {
+    .header-content {
       left: 50%;
       width: auto;
       text-align: center;
       transform: translate(-50%, -50%);
       z-index: 2;
-      .header-caption-text {
-        font-size: 1.5rem;
-      }
-    }
-  }
-  .navbar {
-    height: 60px;
-
-    .brand {
-      figure {
-        width: 60px;
-        height: 60px;
-        img {
-          height: 35px;
+      .header-text {
+        .header-text-title {
+          font-size: 1.5rem;
         }
       }
     }
-    .navbar-list {
-      top: 60px;
-    }
-  }
-  #contact {
-    form {
-      width: 25rem;
-    }
-  }
-}
 
-@media (min-width: $tablet) {
-  header {
-    .header-caption {
-      .header-caption-text {
-        font-size: 1.75rem;
-      }
-    }
-  }
-  .navbar {
-    height: 65px;
-
-    .brand {
-      figure {
-        width: 65px;
-        height: 65px;
-        img {
-          height: 40px;
-        }
-      }
-    }
-    .navbar-list {
-      top: 65px;
-    }
-  }
-  #about {
-    padding-right: 12rem;
-    padding-left: 12rem;
-    .about-container {
-      display: grid;
-      grid-template-columns: auto auto;
-      grid-gap: 0 127px;
-      .about-personal {
-        text-align: left;
+    .navbar {
+      height: 55px;
+  
+      .brand {
         figure {
-          left: 0;
-          transform: translateX(0);
-        }
-        .about-skill {
-          justify-content: left;
+          width: 55px;
+          height: 55px;
+          img {
+            height: 35px;
+          }
         }
       }
-    }
-  }
-  #portfolio {
-    padding-right: 5.563rem;
-    padding-left: 5.563rem;
-  }
-  #article {
-    padding-right: 4rem;
-    padding-left: 4rem;
-    .title-section {
-      font-size: 2.1rem;
-    }
-    .article-container {
-      grid-template-columns: repeat(2, 260px);
-    }
-  }
-  #contact {
-    .title-section {
-      font-size: 2.1rem;
-    }
-    form {
-      width: 27rem;
-    }
-  }
-  footer {
-    .social-media {
-      .social-media-list {
-        .social-media-item {
-          width: 3.75rem;
-          height: 3.75rem;
-          a {
+      .navbar-list {
+        .navbar-item {
+          width: 3rem;
+          height: 3rem;
+          .navbar-link {
             i {
-              font-size: 1.5rem;
+              font-size: 1.3rem;
             }
           }
         }
@@ -116,90 +40,99 @@
   }
 }
 
-@media (min-width: $dekstop) {
+@media (min-width: $tablet) {
   header {
-    .header-caption {
-      .header-caption-text {
-        font-size: 2.25rem;
-      }
-    }
-  }
-
-  .navbar {
-    height: 75px;
-
-    .brand {
-      figure {
-        width: 75px;
-        height: 75px;
-        img {
-          height: 45px;
+    .header-content {
+      .header-text {
+        .header-text-title {
+          font-size: 1.75rem;
         }
       }
     }
-    .navbar-list {
-      position: relative;
-      top: 0;
-      margin: 0 auto;
-      border-bottom: 0;
-      &.hide {
-        left: 0;
-        opacity: 1;
-      }
 
-      .navbar-item {
-        display: inline-block;
-        margin: 0 1.25rem;
+    .navbar {
+      height: 60px;
+  
+      .brand {
+        figure {
+          width: 60px;
+          height: 60px;
+          img {
+            height: 40px;
+          }
+        }
       }
     }
-    .navbar-toggle {
-      display: none;
+  }
+
+  #portfolio {
+    padding-right: 4rem;
+    padding-left: 4rem;
+    .title-section {
+      font-size: 2.1rem;
+    }
+    .portfolio-container {
+      grid-template-columns: repeat(2, 260px);
     }
   }
-  #about {
-    padding-right: 14rem;
-    padding-left: 14rem;
+}
+
+@media (min-width: $dekstop) {
+  header {
+    .header-content {
+      .header-text {
+        .header-text-title {
+          font-size: 2.25rem;
+        }
+      }
+    }
+
+    .navbar {
+      height: 65px;
+  
+      .brand {
+        figure {
+          width: 65px;
+          height: 65px;
+          img {
+            height: 45px;
+          }
+        }
+      }
+    }
   }
-  #article {
+ 
+  #portfolio {
     padding-right: 5.938rem;
     padding-left: 5.938rem;
     .title-section {
       font-size: 2.3rem;
     }
-    .article-container {
+    .portfolio-container {
       grid-template-columns: repeat(3, 260px);
-    }
-  }
-  #contact {
-    .title-section {
-      font-size: 2.3rem;
-    }
-    form {
-      width: 30rem;
     }
   }
 }
 
 @media (min-width: $pc) {
-  .navbar {
-    height: 80px;
-
-    .brand {
-      figure {
-        width: 80px;
-        height: 80px;
-        img {
-          height: 50px;
+  header {
+    .navbar {
+      height: 70px;
+  
+      .brand {
+        figure {
+          width: 70px;
+          height: 70px;
+          img {
+            height: 50px;
+          }
         }
       }
     }
   }
-  #about {
-    padding-right: 16.875rem;
-    padding-left: 16.875rem;
-  }
-  #article {
-    .article-container {
+
+  #portfolio {
+    .portfolio-container {
       grid-template-columns: repeat(4, 260px);
     }
   }

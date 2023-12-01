@@ -77,160 +77,197 @@ const space = () => {
 
       c.fillRect(pixelX, pixelY, pixelRadius, pixelRadius);
       c.fillStyle = 'rgba(209, 255, 255, ' + star.o + ')';
-      //c.fill();
     }
   }
 
   executeFrame();
 };
+
 const handleNavbar = () => {
-  const toggler = document.querySelector('.navbar-toggle'),
-    icons = document.querySelector('.navbar-toggle .fa-bars'),
-    navbar = document.querySelector('nav'),
-    navList = document.querySelector('.navbar-list'),
-    menuSection = document.querySelectorAll('nav li'),
-    mainSection = document.querySelectorAll('.scrollspy');
+  const navbar = document.querySelector('nav');
+  const portfolio = document.getElementById('portfolio');
 
-  // for clickable event
-  menuSection.forEach((v) => {
-    v.onclick = () => {
-      setTimeout(() => {
-        menuSection.forEach((j) => j.classList.remove('active'));
-        v.classList.add('active');
-      }, 300);
-    };
-  });
-
-  navList.classList.toggle('hide');
-
-  toggler.addEventListener('click', (e) => {
-    e.preventDefault();
-    navList.classList.toggle('show');
-    icons.classList.toggle('fa-times');
-  });
-
-  window.onscroll = () => {
-    navbar.offsetTop < 10 ? navbar.classList.remove('shadow') : navbar.classList.add('shadow');
-    mainSection.forEach((v, i) => {
-      let rect = v.getBoundingClientRect().y;
-      if (rect < window.innerHeight - 600) {
-        menuSection.forEach((v) => v.classList.remove('active'));
-        menuSection[i].classList.add('active');
-      }
-    });
-  };
-};
-
-const scrollToTopBtn = document.querySelector('.scroll-up');
-const rootElement = document.documentElement;
-
-const scrollToTop = () => {
-  rootElement.scrollTo({
-    top: 0,
-    behavior: 'smooth',
+  window.addEventListener('scroll', function () {
+    const portfolioRect = portfolio.getBoundingClientRect();
+    portfolioRect.top <= 0 ? navbar.classList.add('dark') : navbar.classList.remove('dark');
   });
 };
-scrollToTopBtn.addEventListener('click', scrollToTop);
 
 const handleProject = () => {
   const items = [
     {
       title: 'Shipper 360',
-      language: 'NextJS / GraphQL / Jest',
+      language: [
+        'next',
+        'stitches',
+        'graphql',
+        'axios',
+      ],
       image: 'assets/images/Portfolio/Shipper 360.jpg',
-      url: 'https://mitra.shipper.id/#/login',
+      url: 'https://360.shipper.id/login',
+      description: "Shipper360 is a website with various services, users register as a merchant then can access several services such as shipping, fulfillment, warehouse and omnichannel. A wallet account is available that can be used for payment of orders and commissions disbursement"
     },
     {
       title: 'Shipper Dashboard',
-      language: 'NextJS / GraphQL / Jest',
+      language: [
+        'next',
+        'styled-jsx',
+        'graphql',
+        'axios',
+      ],
       image: 'assets/images/Portfolio/Shipper BOS.jpg',
       url: 'https://dashboard.shipper.id/login',
+      description: "Shipper Dashboard is a website for merchants, they can send goods to various locations in Indonesia (domestic) and also Intenational. A wallet account is available that can be used for payment of orders and commissions disbursement"
     },
     {
       title: 'Shipper HQ',
-      language: 'ReactJS / GraphQL / Jest',
+      language: [
+        'react',
+        'sass',
+        'graphql',
+        'axios',
+      ],
       image: 'assets/images/Portfolio/Shipper HQ.jpg',
       url: 'https://mitra.shipper.id/#/login',
+      description: "ShipperHQ is a website used by Shipper agents to process orders belonging to merchants and non-merchants, both domestic and international orders. A wallet account is available that can be used for payment of orders and commissions disbursement"
+    },
+    {
+      title: 'AvidX - Profile',
+      language: [
+        'html',
+        'tailwind',
+        'javascript',
+      ],
+      image: 'assets/images/Portfolio/AvidX - Profile.jpg',
+      url: 'https://www.avidx.app/index.html',
+      description: "AvidX is a website designed to facilitate English language practice, providing an immersive learning experience for users of all proficiency levels. This project was born from a passion for developing language skills through engaging and interactive methods."
     },
     {
       title: 'AvidX - Practice',
-      language: 'ReactJS / Axios',
+      language: [
+        'react',
+        'styled-components',
+        'polished',
+        'axios',
+        'react-query',
+      ],
       image: 'assets/images/Portfolio/AvidX - Practice.jpg',
       url: 'https://practice.avidx.app/login',
+      description: "AvidX Practice is a dedicated website designed to improve English language proficiency through targeted and engaging practice sessions. Starting from reading, writing, listening and speaking. User can try to practice on this website for free"
     },
-    {
-      title: 'AvidX',
-      language: 'HTML / Tailwind / Javascript',
-      image: 'assets/images/Portfolio/AvidX - Profile.jpg',
-      url: 'https://www.avidx.app/index.html',
-    },
-    
     {
       title: 'Vita School',
-      language: 'HTML / CSS / Javascript',
+      language: [
+        'html',
+        'bootstrap',
+        'javascript',
+        'laravel'
+      ],
       image: 'assets/images/Portfolio/vita-school.png',
       url: 'https://vitaschool.sch.id/',
-    },
-    {
-      title: 'Froyanesia',
-      language: 'HTML / CSS / Javascript',
-      image: 'assets/images/Portfolio/froya.jpg',
-      url: 'http://froya.co.id',
-    },
-    {
-      title: 'Esusmart',
-      language: 'HTML / CSS / Javascript',
-      image: 'assets/images/Portfolio/esusmart.png',
-      url: 'http://esusmart.com',
-    },
-    {
-      title: 'Bimi',
-      language: 'HTML / CSS / Javascript',
-      image: 'assets/images/Portfolio/bimi.jpg',
-      url: 'http://bmi.esusmart.com',
+      description: "Vita Scholl is a web profile project is a dynamic and informative online platform dedicated to showcasing the essence of Vita School, a prominent educational institution in Surabaya. The website serves as a centralized hub for students, parents, and the community, offering insights into the school's culture, events, and latest updates."
     },
     {
       title: 'Citiplan Indonesia',
-      language: 'HTML / CSS / Javascript',
+      language: [
+        'html',
+        'bootstrap',
+        'javascript',
+        'slick-slider'
+      ],
       image: 'assets/images/Portfolio/citiplan.jpg',
       url: 'https://citiplanindonesia.com',
+      description: "Citiplan Indonesia is a web profile project is a comprehensive and informative online platform that serves as the digital representation of Citiplan Indonesia. The website provides a detailed overview of Citiplan, showcasing its achievements, services, and commitment to excellence. Designed to offer a glimpse into the company's values and accomplishments."
+    },
+    {
+      title: 'Froyanesia',
+      language: [
+        'html',
+        'bootstrap',
+        'javascript',
+        'laravel',
+      ],
+      image: 'assets/images/Portfolio/froya.jpg',
+      url: 'http://froya.co.id',
+      disabled: true,
+      description: "Froyanesia stands as a pioneering digital marketplace tailored for the buying and selling of fresh chicken, providing a convenient and reliable platform for enthusiasts of fresh chicken."
+    },
+    {
+      title: 'Esusmart',
+      language: [
+        'html',
+        'bootstrap',
+        'javascript',
+        'laravel',
+      ],
+      image: 'assets/images/Portfolio/esusmart.png',
+      url: 'http://esusmart.com',
+      disabled: true,
+      description: 'Esusmart represents a groundbreaking venture into the digital realm of neighborhood convenience, serving as a dedicated online marketplace for the modern "kelontong" or mini mart. This web platform redefines the traditional shopping experience by bringing the corner store to the fingertips of users, offering a diverse range of everyday essentials in a seamless and user-friendly digital environment.'
+    },
+    {
+      title: 'Bimi',
+      language: [
+        'html',
+        'bootstrap',
+        'javascript'
+      ],
+      image: 'assets/images/Portfolio/bimi.jpg',
+      url: 'http://bmi.esusmart.com',
+      disabled: true,
+      description: "Bimi is a web profile project stands as a digital gateway to the world of Bimi, a distinguished mining company. This online platform provides a comprehensive overview of Bimi's operations, values, and contributions to the mining industry. Through thoughtful design and informative content, the web profile showcases Bimi's commitment to excellence in the field of mining"
     },
     {
       title: 'Doolen',
-      language: 'HTML / CSS / Javascript',
+      language: [
+        'html',
+        'bootstrap',
+        'javascript'
+      ],
       image: 'assets/images/Portfolio/doolen.jpg',
       url: 'https://doolen.com/',
+      disabled: true,
+      description: "Doolen emerges as a cutting-edge online marketplace designed to revolutionize the way we buy and sell fresh produce, fruits, seafood, and daily essentials. Serving as a digital marketplace for everyday needs, Doolen connects consumers with a diverse range of high-quality, locally sourced products, offering a seamless and convenient solution for modern-day grocery shopping."
     },
     {
       title: 'Artpedia',
-      language: 'HTML / CSS / Javascript',
+      language: [
+        'html',
+        'sass',
+        'javascript'
+      ],
       image: 'assets/images/Portfolio/artpedia.jpg',
       url: 'https://arathfal.github.io/artpedia/',
+      disabled: false,
+      description: "Artpedia is your ultimate destination for information about the vast world of art. This digital platform serves as an information hub, offering diverse insights into various art forms, techniques and cultural movements. Whether you're an art enthusiast, a student, or someone simply curious about the breadth of creativity, Artpedia provides a gateway to exploring and understanding the beauty of art."
     },
   ];
 
-  const container = document.getElementById('portfolioContaniner');
+  const container = document.getElementById('portfolioContainer');
   const content = items.map(
     (val) =>
       `<div class="portfolio-item">
-        <figure>
-          <img src="${val.image}" alt="Undangan Online" />
-        </figure>
-        <div class="card"></div>
-          <div class="portfolio-caption">
-            <h5 class="portfolio-title">${val.title}</h5>
-            <p class="language">${val.language}</p>
+        <div class="portfolio-content-wrapper">
+          <figure>
+            <img src="${val?.image}" alt="${val?.title}" class="mb-16" />
+            <figcaption class="portfolio-title">
+              ${val?.title}
+            </figcaption>
+          </figure>
+          <div class="portfolio-tags-container mb-16">
+            ${val?.language?.map(lang => `<span class="portfolio-tags-item">${lang}</span>`)}
           </div>
-          <a href="${val.url}" target="_blank">
-            <button class="button-pinky">Learn More</button>
-          </a>
+          <p class="portfolio-content mb-24">${val?.description}</p>
         </div>
-      `,
+        <a href="${val?.url}" ${val?.disabled ? 'class="offline"' : ''} target="_blank">
+          <button class="button-black full-width">Visit Site</button>
+        </a>
+      </div>`,
   );
 
   container.innerHTML = content.join('');
 };
 
 space();
-handleNavbar();
+handleNavbar()
 handleProject();
