@@ -116,6 +116,7 @@
       border-radius: 4px;
       z-index: 10;
       transition: 0.3s;
+      pointer-events: none;
     }
     &.offline {
       cursor: default;
