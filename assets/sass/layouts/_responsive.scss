@@ -1,0 +1,80 @@
+@media (min-width: $mobile) {
+  header {
+    .header {
+      &-content {
+        left: 50%;
+        width: auto;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+      }
+      &-text {
+        &-title {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $tablet) {
+  header {
+    .header {
+      &-text {
+        &-title {
+          font-size: 1.75rem;
+        }
+      }
+    }
+  }
+
+  .modal {
+    padding: 0;
+    &-container {
+      width: 550px;
+    }
+  }
+
+  
+  .portfolio {
+    padding-right: 4rem;
+    padding-left: 4rem;
+    .title-section {
+      font-size: 2.1rem;
+    }
+    &-container {
+      grid-template-columns: repeat(2, 260px);
+    }
+  }
+}
+
+@media (min-width: $dekstop) {
+  header {
+    .header {
+      &-text {
+        &-title {
+          font-size: 2.25rem;
+        }
+      }
+    }
+  }
+ 
+  .portfolio {
+    padding-right: 5.938rem;
+    padding-left: 5.938rem;
+    .title-section {
+      font-size: 2.3rem;
+    }
+    &-container {
+      grid-template-columns: repeat(3, 260px);
+    }
+  }
+}
+
+@media (min-width: $pc) {
+  .portfolio {
+    &-container {
+      grid-template-columns: repeat(4, 260px);
+    }
+  }
+}

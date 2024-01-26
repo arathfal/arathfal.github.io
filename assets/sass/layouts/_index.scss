@@ -1,0 +1,229 @@
+.button-blue {
+  width: auto;
+  height: auto;
+  padding: 10px 30px;
+  background: $daylight-blue;
+  color: $light-1;
+  text-align: center;
+  border-radius: 5px;
+  &:hover {
+    background: #0f78c3;
+  }
+  &:focus {
+    box-shadow: 0 0 0 2px #4932d8;
+  }
+}
+
+.button-dark {
+  width: auto;
+  height: auto;
+  padding: 10px 30px;
+  background: $dark-1;
+  color: $light-1;
+  text-align: center;
+  border-radius: 5px;
+  border: 2px solid $light-1;
+  &:hover {
+    background: $light-1;
+    color: $dark-1;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+
+  &.full-width {
+    display: block;
+    width: 100%;
+  }
+}
+
+.button-black {
+  width: auto;
+  height: auto;
+  padding: 10px 30px;
+  background: $dark-1;
+  color: $light-1;
+  text-align: center;
+  border-radius: 5px;
+  border: 2px solid $dark-1;
+    &:hover {
+    background: $light-1;
+    color: $dark-1;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+
+  &.full-width {
+    display: block;
+    width: 100%;
+  }
+}
+
+.title-section {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: $light-1;
+  text-align: center;
+  margin-bottom: 5rem;
+  span {
+    font-weight: 700;
+    color: $light-2;
+  }
+}
+.subtitle-section {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: $light-2;
+  margin-bottom: 5px;
+}
+
+.portfolio {
+  &-container {
+    display: grid;
+    grid-template-columns: 260px;
+    grid-gap: 60px 40px;
+    justify-content: center;
+  }
+  &-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    img {
+      width: 100%;
+      height: 150px;
+      object-fit: fill;
+    }
+    &-title {
+      color: $light-1;
+      margin-bottom: 5px;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+    &-description {
+      color: $light-2;
+      font-size: 0.875rem;
+      font-weight: 400;
+    }
+    &-tags {
+      &-container {
+        display: flex;
+        gap: 4px 0;
+        flex-wrap: wrap;
+      }
+      &-title {
+        color: $dark-3;
+        background: $light-2;
+        padding: 2px 4px;
+        font-size: 0.75rem;
+        font-weight: 400;
+        border-radius: 3px;
+      }
+    }
+  }
+}
+
+.modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 0 2rem;
+  &.open {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+  }
+  &-overlay {
+    position: absolute;
+    background: rgba($dark-1, 0.7);
+    width: 100%;
+    height: 100%;
+  }
+  &-container {
+    position: relative;
+    max-width: 100%;
+    max-height: calc(100vh - 2.25rem);
+    background: $light-1;
+    border-radius: 8px;
+    box-shadow: 0 0 10px 0 $light-1;
+  }
+  &-image {
+    border-top-right-radius: inherit;
+    border-top-left-radius: inherit;
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: inherit;
+    }
+  }
+  &-content {
+    padding: 0.75rem 1.5rem 1.5rem;
+  }
+  &-scrollable-container {
+    max-height: 500px;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+    
+  }
+  &-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: $dark-1;
+  }
+  &-subtitle {
+    font-size: 1rem;
+    font-weight: 600;
+    color: $dark-1;
+  }
+  &-description {
+    font-size: 14px;
+    font-weight: 400;
+    color: $dark-1;
+  }
+  &-link {
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 45px;
+      left: 15%;
+      opacity: 0;
+      max-width: 100%;
+      color: $dark-1;
+      background-color: $light-1;
+      padding: 8px;
+      font-size: 14px;
+      border-radius: 4px;
+      z-index: 101;
+      transition: 0.3s;
+      pointer-events: none;
+      box-shadow: 0 0 8px 0 $dark-1;
+    }
+    &.offline {
+      cursor: default;
+      .button-black {
+        pointer-events: none;
+        cursor: default;
+      }
+      &:hover {
+        &::before {
+          content: 'Sorry, unfortunately this website has been closed by the owner';
+          opacity: 1;
+          animation: down 0.2s ease-in-out 1;
+        }
+      }
+    }
+  }
+}
