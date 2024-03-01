@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer base {
+  body {
+    @apply overflow-hidden bg-white font-medium text-slate-900 dark:bg-slate-800 dark:text-white;
+  }
+
+  #app {
+    @apply relative flex min-h-screen flex-col bg-slate-500/10 dark:bg-slate-950/10;
+  }
+
+  #app:before {
+    content: '';
+    left: -150%;
+    width: 300%;
+    z-index: -1;
+    @apply absolute top-0 h-full rotate-45 bg-slate-500/30 dark:bg-slate-950/50;
+  }
+
+  main {
+    height: calc(theme('height.screen') - theme('spacing.20') - theme('spacing.16'));
+  }
+
+  a {
+    @apply font-semibold transition-all duration-300;
+  }
+  a:not(.router-link-active, .button-link, .social-media-link):hover {
+    @apply text-slate-600 dark:text-slate-400;
+  }
+
+  span,
+  a {
+    @apply inline-block;
+  }
+}
