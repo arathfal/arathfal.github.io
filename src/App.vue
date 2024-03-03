@@ -13,7 +13,7 @@ import Footer from './components/Footer.vue';
   <Footer />
 </template>
 
-<style>
+<style scoped>
 .slide-fade-enter-active {
   @apply transition duration-300 ease-out;
 }

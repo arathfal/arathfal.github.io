@@ -16,7 +16,28 @@
   }
 
   #app {
-    @apply relative flex min-h-screen flex-col bg-slate-500/10 dark:bg-slate-950/10;
+    @apply relative min-h-screen bg-slate-500/10 dark:bg-slate-950/10;
+    display: grid;
+    grid-template-areas:
+      'header'
+      'main'
+      'footer';
+    grid-template-rows: 80px 1fr 64px;
+    max-height: 100vh;
+    overflow: hidden;
+  }
+
+  #app > header {
+    grid-area: header;
+  }
+
+  #app > main {
+    @apply container mx-auto min-h-[calc(100vh-80px-64px)] overflow-auto p-5;
+    grid-area: main;
+  }
+
+  #app > footer {
+    grid-area: footer;
   }
 
   #app:before {
@@ -27,10 +48,6 @@
     @apply absolute top-0 h-full rotate-45 bg-slate-500/30 dark:bg-slate-950/50;
   }
 
-  main {
-    height: calc(theme('height.screen') - theme('spacing.20') - theme('spacing.16'));
-  }
-
   a {
     @apply font-semibold transition-all duration-300;
   }
@@ -39,7 +56,8 @@
   }
 
   span,
-  a {
+  a,
+  strong {
     @apply inline-block;
   }
 }

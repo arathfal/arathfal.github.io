@@ -5,7 +5,7 @@ import TECH_STACKS from '@/constants/techStack';
 </script>
 
 <template>
-  <main class="container mx-auto flex flex-col items-center p-5 md:flex-row">
+  <main class="flex flex-col items-center md:flex-row">
     <section
       class="order-2 flex flex-col items-center text-center md:order-1 md:w-1/2 md:items-start md:pr-16 md:text-left lg:flex-grow lg:pr-24"
     >
