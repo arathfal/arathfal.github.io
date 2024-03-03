@@ -1,12 +1,3 @@
-<script setup lang="ts">
-defineProps({
-  class: {
-    type: String,
-    default: '',
-  },
-});
-</script>
-
 <template>
   <svg
     fill="#00D8FF"
@@ -32,3 +23,12 @@ defineProps({
     </g>
   </svg>
 </template>
+
+<script setup lang="ts">
+defineProps({
+  class: {
+    type: String,
+    default: '',
+  },
+});
+</script>

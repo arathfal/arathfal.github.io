@@ -1,3 +1,7 @@
+<template>
+  <img :class="class" :alt="alt" :src="image" />
+</template>
+
 <script setup lang="ts">
 const props = defineProps({
   class: {
@@ -14,10 +18,6 @@ const props = defineProps({
   },
 });
 
-const renderImage = new URL('../assets/images', import.meta.url).href;
+const renderImage = new URL('../../assets/images', import.meta.url).href;
 const image = `${renderImage}${props.src}`;
 </script>
-
-<template>
-  <img :class="class" :alt="alt" :src="image" />
-</template>

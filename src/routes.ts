@@ -1,6 +1,6 @@
-import About from '@/views/About.vue';
-import Career from '@/views/Career.vue';
-import Projects from '@/views/Projects.vue';
+import About from '@/views/About';
+import Career from '@/views/Career';
+import Projects from '@/views/Projects';
 import { createRouter, createWebHistory } from 'vue-router';
 import paths from './constants/paths';
 

@@ -1,0 +1,13 @@
+.project-image-container {
+  border-top-right-radius: inherit;
+  border-top-left-radius: inherit;
+}
+
+.project-image {
+  @apply h-auto w-full;
+  border-radius: inherit;
+}
+
+.project-content::-webkit-scrollbar {
+  @apply w-0;
+}

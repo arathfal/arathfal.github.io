@@ -1,0 +1,3 @@
+.router-link-active {
+  @apply border-b border-slate-600 dark:!border-white;
+}

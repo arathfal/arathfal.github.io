@@ -16,15 +16,12 @@
   }
 
   #app {
-    @apply relative min-h-screen bg-slate-500/10 dark:bg-slate-950/10;
-    display: grid;
+    @apply relative grid max-h-screen overflow-hidden bg-slate-500/10 dark:bg-slate-950/10;
     grid-template-areas:
       'header'
       'main'
       'footer';
     grid-template-rows: 80px 1fr 64px;
-    max-height: 100vh;
-    overflow: hidden;
   }
 
   #app > header {
@@ -32,12 +29,16 @@
   }
 
   #app > main {
-    @apply container mx-auto min-h-[calc(100vh-80px-64px)] overflow-auto p-5;
+    @apply container relative mx-auto min-h-[calc(100vh-80px-64px)] overflow-auto p-5;
     grid-area: main;
   }
 
   #app > footer {
     grid-area: footer;
+  }
+
+  main::-webkit-scrollbar {
+    @apply w-0;
   }
 
   #app:before {

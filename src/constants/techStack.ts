@@ -1,9 +1,11 @@
-import IconJest from '@/components/Icons/IconJest.vue';
-import IconNextJS from '@/components/Icons/IconNextJS.vue';
-import IconNodeJS from '@/components/Icons/IconNodeJS.vue';
-import IconReactJS from '@/components/Icons/IconReactJS.vue';
-import IconTailwind from '@/components/Icons/IconTailwind.vue';
-import IconTypescript from '@/components/Icons/IconTypescript.vue';
+import {
+  IconJest,
+  IconNextJS,
+  IconNodeJS,
+  IconReactJS,
+  IconTailwind,
+  IconTypescript,
+} from '@/components/Icons';
 
 const TECH_STACKS = [
   {

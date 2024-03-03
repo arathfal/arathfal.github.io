@@ -1,8 +1,3 @@
-<script setup lang="ts">
-import Header from '@/components/Header.vue';
-import Footer from './components/Footer.vue';
-</script>
-
 <template>
   <Header />
   <router-view v-slot="{ Component }">
@@ -12,6 +7,11 @@ import Footer from './components/Footer.vue';
   </router-view>
   <Footer />
 </template>
+
+<script setup lang="ts">
+import Footer from '@/components/Footer';
+import Header from '@/components/Header';
+</script>
 
 <style scoped>
 .slide-fade-enter-active {
@@ -27,3 +27,4 @@ import Footer from './components/Footer.vue';
   @apply translate-x-6 opacity-0;
 }
 </style>
+./components/Footer/Footer.vue

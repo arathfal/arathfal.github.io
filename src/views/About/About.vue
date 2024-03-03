@@ -1,9 +1,3 @@
-<script setup lang="ts">
-import IconDocument from '@/components/Icons/IconDocument.vue';
-import paths from '@/constants/paths';
-import TECH_STACKS from '@/constants/techStack';
-</script>
-
 <template>
   <main class="flex flex-col items-center md:flex-row">
     <section
@@ -31,14 +25,14 @@ import TECH_STACKS from '@/constants/techStack';
       <div class="flex items-center gap-4">
         <router-link
           :to="paths.PROJECTS"
-          class="button-link w-32 rounded border-0 bg-indigo-600 py-2 text-center align-middle text-lg text-white transition-all hover:bg-indigo-500"
+          class="button-link w-32 rounded border border-slate-600 bg-slate-600 py-2 text-center text-lg text-white transition-all hover:bg-slate-500"
         >
           Explore
         </router-link>
         <a
           href="/resume.pdf"
           target="_blank"
-          class="button-link inline-flex w-32 items-center justify-center gap-1 rounded border-0 bg-slate-600 py-2 text-lg text-white transition-all hover:bg-slate-500"
+          class="button-link inline-flex w-32 items-center justify-center gap-1 rounded border border-slate-500 bg-slate-950 py-2 text-lg text-white transition-all hover:bg-slate-900"
         >
           <IconDocument class="size-4 fill-white" title="Dark" />
           Resume
@@ -57,4 +51,8 @@ import TECH_STACKS from '@/constants/techStack';
   </main>
 </template>
 
-<!-- href="https://drive.google.com/file/d/1_vjYM9O2B8GvPp_F7EYDZ3zAd1Edc7Cv/view?usp=sharing" -->
+<script setup lang="ts">
+import { IconDocument } from '@/components/Icons';
+import paths from '@/constants/paths';
+import TECH_STACKS from '@/constants/techStack';
+</script>

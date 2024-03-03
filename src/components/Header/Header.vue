@@ -1,15 +1,3 @@
-<script setup lang="ts">
-import paths from '@/constants/paths';
-import { useDark, useToggle } from '@vueuse/core';
-import { computed } from 'vue';
-import IconMoon from './Icons/IconMoon.vue';
-import IconSun from './Icons/IconSun.vue';
-
-const dark = useDark();
-const toggleDark = useToggle(dark);
-const isDark = computed(() => dark.value);
-</script>
-
 <template>
   <header class="relative flex w-full items-center justify-between gap-5 px-5 py-5 sm:px-8">
     <div class="flex items-center gap-3">
@@ -32,8 +20,15 @@ const isDark = computed(() => dark.value);
   </header>
 </template>
 
-<style scoped>
-.router-link-active {
-  @apply border-b border-slate-600 dark:!border-white;
-}
-</style>
+<script setup lang="ts">
+import paths from '@/constants/paths';
+import { useDark, useToggle } from '@vueuse/core';
+import { computed } from 'vue';
+import { IconMoon, IconSun } from '../Icons';
+
+const dark = useDark();
+const toggleDark = useToggle(dark);
+const isDark = computed(() => dark.value);
+</script>
+
+<style scoped src="./styles.css"></style>
