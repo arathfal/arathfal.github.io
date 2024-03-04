@@ -2,7 +2,7 @@
   {
     "title": "Shipper 360",
     "stack": ["next", "stitches", "graphql", "axios"],
-    "image": "/portfolios/Shipper 360.jpg",
+    "image": "portfolios/Shipper 360.jpg",
     "url": "https://360.shipper.id/login",
     "description": "Shipper360 provides a range of services for merchants, including shipping, fulfillment, warehousing, omnichannel solutions, and a wallet for payment management.",
     "contribution": [
@@ -16,7 +16,7 @@
   {
     "title": "Shipper Dashboard",
     "stack": ["next", "styled-jsx", "graphql", "axios"],
-    "image": "/portfolios/Shipper BOS.jpg",
+    "image": "portfolios/Shipper BOS.jpg",
     "url": "https://dashboard.shipper.id/login",
     "description": "Shipper Dashboard facilitates domestic and international shipping for merchants, alongside a wallet for order payments and commission disbursements.",
     "contribution": [
@@ -30,7 +30,7 @@
   {
     "title": "Shipper HQ",
     "stack": ["react", "sass", "graphql", "axios"],
-    "image": "/portfolios/Shipper HQ.jpg",
+    "image": "portfolios/Shipper HQ.jpg",
     "url": "https://mitra.shipper.id/#/login",
     "description": "ShipperHQ aids agents in processing domestic and international orders for merchants and non-merchants. It includes a wallet for order payments and commission disbursement.",
     "contribution": [
@@ -44,7 +44,7 @@
   {
     "title": "AvidX - Profile",
     "stack": ["html", "tailwind", "javascript"],
-    "image": "/portfolios/AvidX - Profile.jpg",
+    "image": "portfolios/AvidX - Profile.jpg",
     "url": "https://www.avidx.app/index.html",
     "description": "AvidX is an immersive English practice for all levels. Passionately crafted to enhance stack skills through engaging methods.",
     "contribution": [
@@ -56,7 +56,7 @@
   {
     "title": "AvidX - Practice",
     "stack": ["react", "styled-components", "polished", "axios", "react-query"],
-    "image": "/portfolios/AvidX - Practice.jpg",
+    "image": "portfolios/AvidX - Practice.jpg",
     "url": "https://practice.avidx.app/login",
     "description": "AvidX Practice elevates English skills through focused reading, writing, listening, and speaking sessions. Enjoy free access to these beneficial sessions.",
     "contribution": [
@@ -69,7 +69,7 @@
   {
     "title": "Vita School",
     "stack": ["html", "bootstrap", "javascript", "laravel"],
-    "image": "/portfolios/Vita School.jpg",
+    "image": "portfolios/Vita School.jpg",
     "url": "https://vitaschool.sch.id/",
     "description": "Vita School's dynamic web profile highlights the institution's essence, serving students, parents, and the community with cultural insights and event updates.",
     "contribution": [
@@ -82,7 +82,7 @@
   {
     "title": "Citiplan Indonesia",
     "stack": ["html", "bootstrap", "javascript", "slick-slider"],
-    "image": "/portfolios/Citiplan Indonesia.jpg",
+    "image": "portfolios/Citiplan Indonesia.jpg",
     "url": "https://citiplanindonesia.com",
     "description": "Citiplan Indonesia's web profile showcases achievements, services, and commitment to excellence, reflecting company values.",
     "contribution": [
@@ -94,7 +94,7 @@
   {
     "title": "Artpedia",
     "stack": ["html", "sass", "javascript"],
-    "image": "/portfolios/artpedia.jpg",
+    "image": "portfolios/artpedia.jpg",
     "url": "https://arathfal.github.io/artpedia/",
     "description": "Your go-to for art info! Explore diverse art forms, techniques, and cultural movements. Perfect for enthusiasts, students, and the curious.",
     "contribution": [

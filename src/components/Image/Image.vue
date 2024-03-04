@@ -1,8 +1,10 @@
 <template>
-  <img :class="class" :alt="alt" :src="image" />
+  <img :class="class" :alt="alt" :src="url" />
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue';
+
 const props = defineProps({
   class: {
     required: false,
@@ -18,6 +20,8 @@ const props = defineProps({
   },
 });
 
-const renderImage = new URL('../../assets/images', import.meta.url).href;
-const image = `${renderImage}${props.src}`;
+const url = computed(() => {
+  const glob = import.meta.glob('@/assets/images/**', { eager: true, import: 'default' });
+  return glob?.[`/src/assets/images/${props.src}`] as string;
+});
 </script>

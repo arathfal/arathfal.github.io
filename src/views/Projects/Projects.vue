@@ -68,8 +68,6 @@ const closeDetail = () => {
   dataModal.value = {} as PortfoliosType;
   isShowDetail.value = false;
 };
-
-console.log(dataModal);
 </script>
 
 <style scoped src="./styles.css"></style>

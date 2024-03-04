@@ -3,7 +3,6 @@ export interface PortfoliosType {
   stack: string[];
   image: string;
   url: string;
-  disabled: boolean;
   description: string;
-  contribution?: string;
+  contribution: string[];
 }
