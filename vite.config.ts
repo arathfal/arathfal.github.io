@@ -1,10 +1,11 @@
 import vue from '@vitejs/plugin-vue';
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
+import pluginRewriteAll from 'vite-plugin-rewrite-all';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [vue(), pluginRewriteAll()],
   optimizeDeps: {
     esbuildOptions: {
       target: 'es2020',
@@ -12,6 +13,7 @@ export default defineConfig({
   },
   build: {
     target: 'es2020',
+    minify: 'esbuild',
   },
   resolve: {
     alias: [

@@ -42,9 +42,7 @@
     <section
       class="relative order-1 mb-8 flex w-5/6 justify-center md:order-2 md:mb-0 md:w-1/2 lg:w-full lg:max-w-lg"
     >
-      <figure
-        class="relative size-60 overflow-hidden rounded-full bg-slate-400 sm:size-80 lg:size-96 dark:bg-slate-700"
-      >
+      <figure class="relative size-60 overflow-hidden rounded-full bg-slate-400 sm:size-80 dark:bg-slate-700">
         <img class="relative z-20 h-full w-full" alt="hero" src="@/assets/images/Photo Profile.png" />
       </figure>
     </section>
