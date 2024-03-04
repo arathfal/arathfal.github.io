@@ -28,7 +28,10 @@
           <p class="mb-auto leading-relaxed">
             {{ detail?.description }}
           </p>
-          <button class="text-nowrap border-b-2 border-slate-900 px-4 text-lg dark:border-white">
+          <button
+            @click="emit('onOpenDetail')"
+            class="text-nowrap border-b-2 border-slate-900 px-4 text-lg dark:border-white"
+          >
             <strong>View Detail</strong>
           </button>
         </div>
@@ -46,7 +49,7 @@ import { Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { PropType, onMounted } from 'vue';
 
-const emit = defineEmits<{ onChangeSlide: [index: number] }>();
+const emit = defineEmits<{ onChangeSlide: [index: number]; onOpenDetail: [] }>();
 const props = defineProps({
   slides: {
     required: true,

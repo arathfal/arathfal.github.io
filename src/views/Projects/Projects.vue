@@ -25,7 +25,7 @@
       </div>
       <div class="swiper-pagination"></div>
     </section>
-    <ProjectsSwipper :slides="slides" @onChangeSlide="slideTo" :detail="detail" />
+    <ProjectsSwipper :slides="slides" @onChangeSlide="slideTo" :detail="detail" @onOpenDetail="openDetail" />
   </main>
 </template>
 
