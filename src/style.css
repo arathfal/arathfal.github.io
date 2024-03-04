@@ -19,9 +19,8 @@
     @apply relative grid max-h-screen overflow-hidden bg-slate-500/10 dark:bg-slate-950/10;
     grid-template-areas:
       'header'
-      'main'
-      'footer';
-    grid-template-rows: 80px 1fr 64px;
+      'main';
+    grid-template-rows: 80px 1fr;
   }
 
   #app > header {
@@ -29,7 +28,7 @@
   }
 
   #app > main {
-    @apply container relative mx-auto min-h-[calc(100vh-80px-64px)] overflow-auto p-5;
+    @apply container relative mx-auto min-h-[calc(100vh-80px)] overflow-auto p-5 sm:min-h-[calc(100vh-80px-64px)];
     grid-area: main;
   }
 
@@ -60,5 +59,15 @@
   a,
   strong {
     @apply inline-block;
+  }
+
+  @media (min-width: 600px) {
+    #app {
+      grid-template-areas:
+        'header'
+        'main'
+        'footer';
+      grid-template-rows: 80px 1fr 64px;
+    }
   }
 }

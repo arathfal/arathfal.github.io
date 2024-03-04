@@ -13,19 +13,22 @@
         Passionately experienced in crafting captivating website interfaces, ensuring seamless user
         interaction and engagement
       </p>
-      <div class="mb-8 mt-2.5 flex items-center gap-2 text-sm text-slate-700 dark:text-slate-300">
-        <span title="Test">Tech Stack:</span>
-        <span
-          v-for="{ title, icon } in TECH_STACKS"
-          :key="title"
-          class="relative inline-flex size-7 items-center rounded-md bg-slate-600 p-1"
-          :title="title"
-        >
-          <component
-            :is="icon"
-            class="size-6 transition-all duration-700 [&:not(:hover)]:fill-slate-400"
-          />
-        </span>
+      <div
+        class="mb-8 mt-2.5 flex flex-col items-center gap-2 text-sm text-slate-700 sm:flex-row dark:text-slate-300"
+      >
+        <span class="sm:h-7">Tech Stack:</span>
+        <span class="space-x-2">
+          <span
+            v-for="{ title, icon } in TECH_STACKS"
+            :key="title"
+            class="relative inline-flex size-7 items-center rounded-md bg-slate-600 p-1"
+            :title="title"
+          >
+            <component
+              :is="icon"
+              class="size-6 transition-all duration-700 [&:not(:hover)]:fill-slate-400"
+            /> </span
+        ></span>
       </div>
       <div class="flex items-center gap-4">
         <router-link
