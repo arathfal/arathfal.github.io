@@ -1,5 +1,7 @@
 <template>
-  <main class="relative flex flex-col gap-4 md:flex-row md:items-center">
+  <main
+    class="relative flex flex-col justify-center gap-4 md:flex-row md:items-center md:justify-normal"
+  >
     <ProjectModal :show="isShowDetail" :data="dataModal" @onClose="closeDetail" />
     <section class="relative order-2 w-full md:order-1 md:w-1/2">
       <div class="relative hidden min-h-[380px] md:flex">
