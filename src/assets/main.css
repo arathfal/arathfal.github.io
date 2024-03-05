@@ -23,12 +23,20 @@
     grid-template-rows: 80px 1fr;
   }
 
+  #app:before {
+    content: '';
+    left: -150%;
+    width: 300%;
+    z-index: -1;
+    @apply absolute top-0 h-full rotate-45 bg-slate-500/30 dark:bg-slate-950/50;
+  }
+
   #app > header {
     grid-area: header;
   }
 
   #app > main {
-    @apply container relative mx-auto min-h-[calc(100vh-80px)] overflow-auto p-5 sm:min-h-[calc(100vh-80px-64px)];
+    @apply container relative mx-auto h-[calc(100vh-80px)] overflow-auto p-5 sm:h-[calc(100vh-80px-64px)];
     grid-area: main;
   }
 
@@ -38,14 +46,6 @@
 
   main::-webkit-scrollbar {
     @apply w-0;
-  }
-
-  #app:before {
-    content: '';
-    left: -150%;
-    width: 300%;
-    z-index: -1;
-    @apply absolute top-0 h-full rotate-45 bg-slate-500/30 dark:bg-slate-950/50;
   }
 
   a {

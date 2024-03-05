@@ -1,5 +1,14 @@
 <template>
   <header class="relative flex w-full items-center gap-5 px-5 py-5 sm:px-8">
+    <div
+      v-if="isShowMenu"
+      class="absolute left-0 top-0 z-[50] h-screen w-screen bg-transparent sm:hidden"
+    >
+      <button @click="isShowMenu = false" class="h-full w-full cursor-default text-transparent">
+        Close Menu
+      </button>
+    </div>
+
     <div class="flex w-full items-center gap-3 sm:w-auto">
       <figure class="inline-flex size-10 items-center justify-center rounded-full bg-white">
         <img src="@/assets/images/Black Logo.png" class="size-6" alt="Logo" />
@@ -17,9 +26,15 @@
       <nav
         class="order-2 flex flex-col gap-4 border-gray-400 sm:order-1 sm:flex-row sm:items-center sm:border-l sm:px-5"
       >
-        <router-link class="px-2 py-1 text-center" :to="paths.ABOUT">About</router-link>
-        <router-link class="px-2 py-1 text-center" :to="paths.PROJECTS">Projects</router-link>
-        <router-link class="px-2 py-1 text-center" :to="paths.CAREER">Career</router-link>
+        <router-link @click="onClickRoute" class="px-2 py-1 text-center" :to="paths.ABOUT"
+          >About</router-link
+        >
+        <router-link @click="onClickRoute" class="px-2 py-1 text-center" :to="paths.PROJECTS"
+          >Projects</router-link
+        >
+        <router-link @click="onClickRoute" class="px-2 py-1 text-center" :to="paths.CAREER"
+          >Career</router-link
+        >
       </nav>
 
       <div class="order-1 flex w-full justify-between gap-5 sm:order-2 sm:w-auto">
@@ -73,6 +88,12 @@ onMounted(() => {
     window.removeEventListener('resize', handleResize)
   })
 })
+
+const onClickRoute = () => {
+  if (isShowMenu.value) {
+    isShowMenu.value = false
+  }
+}
 </script>
 
 <style scoped src="./styles.css"></style>
