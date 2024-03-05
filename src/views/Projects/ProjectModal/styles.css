@@ -8,6 +8,6 @@
   border-radius: inherit;
 }
 
-.project-content::-webkit-scrollbar {
+.project-content-scrollable::-webkit-scrollbar {
   @apply w-0;
 }

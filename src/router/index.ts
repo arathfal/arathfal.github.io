@@ -8,22 +8,22 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     redirect: {
-      name: 'About'
+      name: 'about'
     }
   },
   {
     path: paths.ABOUT,
-    name: 'About',
+    name: 'about',
     component: About
   },
   {
     path: paths.CAREER,
-    name: 'Career',
+    name: 'career',
     component: Career
   },
   {
     path: paths.PROJECTS,
-    name: 'Projects',
+    name: 'projects',
     component: Projects
   }
 ]
