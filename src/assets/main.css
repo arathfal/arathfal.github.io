@@ -12,7 +12,7 @@
 
 @layer base {
   body {
-    @apply bg-white font-medium text-slate-900 sm:overflow-hidden dark:bg-slate-800 dark:text-white;
+    @apply bg-white font-medium text-slate-900 dark:bg-slate-800 dark:text-white;
   }
 
   #app {

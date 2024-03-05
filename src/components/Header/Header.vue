@@ -45,12 +45,10 @@
 <script setup lang="ts">
 import paths from '@/constants/paths'
 import { useDark, useToggle } from '@vueuse/core'
-import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
-import { IconLove, IconMoon, IconSun } from '../Icons'
-import IconCross from '../Icons/IconCross.vue'
-import IconMenu from '../Icons/IconMenu.vue'
+import { computed, onBeforeMount, onBeforeUnmount, onMounted, ref } from 'vue'
+import { IconCross, IconLove, IconMenu, IconMoon, IconSun } from '../Icons'
 
-const isShowMenu = ref(false)
+const isShowMenu = ref(true)
 const toggleMenu = () => {
   isShowMenu.value = !isShowMenu.value
 }
@@ -58,15 +56,17 @@ const dark = useDark()
 const toggleDark = useToggle(dark)
 const isDark = computed(() => dark.value)
 
-onMounted(() => {
-  const handleResize = () => {
-    if (window.innerWidth >= 600) {
-      isShowMenu.value = true
-    } else {
-      isShowMenu.value = false
-    }
+const handleResize = () => {
+  if (window.innerWidth >= 600) {
+    isShowMenu.value = true
+  } else {
+    isShowMenu.value = false
   }
+}
 
+onBeforeMount(handleResize)
+
+onMounted(() => {
   window.addEventListener('resize', handleResize)
 
   onBeforeUnmount(() => {

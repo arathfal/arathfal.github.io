@@ -5,13 +5,9 @@
         <strong><span class="text-slate-500">My </span> Career</strong>
       </h1>
       <p class="leading-relaxed">
-        Step into my career story and witness the evolution of my professional journey in the realm
-        of technology. From the early days of freelancing to my tenure in esteemed companies, this
-        page chronicles my experiences, challenges, and triumphs. Delve into the details of my
-        projects, spanning from website creation to end-to-end testing, and see how each role has
-        shaped my expertise. Join me on this immersive exploration of my career path, where every
-        milestone is a testament to my passion for innovation and growth. Welcome to my world of
-        tech!
+        Explore my tech journey, from freelancing to roles in esteemed companies. Dive into my
+        projects, from websites to testing, and see how each shaped my expertise. Join me on this
+        journey of innovation and growth in the world of tech!
       </p>
     </section>
     <section class="career-timeline w-full md:w-3/5">
@@ -62,12 +58,4 @@ import { ref } from 'vue'
 const careers = ref<Array<CareersType>>(data)
 </script>
 
-<style scoped>
-.career-timeline {
-  @apply md:overflow-auto;
-}
-
-.career-timeline::-webkit-scrollbar {
-  @apply w-0;
-}
-</style>
+<style scoped src="./styles.css"></style>

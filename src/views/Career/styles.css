@@ -1,0 +1,7 @@
+.career-timeline {
+  @apply md:!overflow-auto;
+}
+
+.career-timeline::-webkit-scrollbar {
+  @apply w-0;
+}
