@@ -15,7 +15,7 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
-      title: 'Aradea Atfal Risdianto',
+      title: 'Aradea Atfal - Front End Engineer',
       htmlAttrs: {
         lang: 'en'
       },
