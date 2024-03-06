@@ -69,7 +69,7 @@ import { onBeforeMount, onBeforeUnmount, onMounted, ref } from 'vue'
 import { IconCross, IconLove, IconMenu, IconMoon, IconSun } from '../Icons'
 
 const isMobile = ref(false)
-const isShowMenu = ref(true)
+const isShowMenu = ref(false)
 const toggleMenu = () => {
   isShowMenu.value = !isShowMenu.value
 }
@@ -82,12 +82,14 @@ const handleResize = () => {
     isShowMenu.value = true
     isMobile.value = false
   } else {
-    isShowMenu.value = true
+    isShowMenu.value = false
     isMobile.value = true
   }
 }
 
-onBeforeMount(handleResize)
+onBeforeMount(() => {
+  setTimeout(handleResize, 100)
+})
 
 onMounted(() => {
   window.addEventListener('resize', handleResize)
