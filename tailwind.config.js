@@ -1,15 +1,22 @@
 /** @type {import('tailwindcss').Config} */
-const defaultTheme = require('tailwindcss/defaultTheme');
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 export default {
-  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  content: [
+    './components/**/*.{js,vue,ts}',
+    './layouts/**/*.vue',
+    './pages/**/*.vue',
+    './views/**/*.vue',
+    './app.vue',
+    './error.vue'
+  ],
   darkMode: 'selector',
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Exo 2"', ...defaultTheme.fontFamily.sans],
-      },
-    },
+        sans: ['"Exo 2"', ...defaultTheme.fontFamily.sans]
+      }
+    }
   },
-  plugins: [],
-};
+  plugins: []
+}
