@@ -64,6 +64,7 @@ import { computed, onBeforeMount, onBeforeUnmount, onMounted, ref } from 'vue'
 import { IconCross, IconLove, IconMenu, IconMoon, IconSun } from '../Icons'
 
 const isShowMenu = ref(true)
+const isMobile = ref(false)
 const toggleMenu = () => {
   isShowMenu.value = !isShowMenu.value
 }
@@ -74,8 +75,10 @@ const isDark = computed(() => dark.value)
 const handleResize = () => {
   if (window.innerWidth >= 600) {
     isShowMenu.value = true
+    isMobile.value = false
   } else {
     isShowMenu.value = false
+    isMobile.value = true
   }
 }
 
@@ -90,7 +93,7 @@ onMounted(() => {
 })
 
 const onClickRoute = () => {
-  if (isShowMenu.value) {
+  if (isShowMenu.value && isMobile.value) {
     isShowMenu.value = false
   }
 }
