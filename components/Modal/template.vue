@@ -1,6 +1,6 @@
 <template>
   <teleport to="body">
-    <transition name="fade" mode="out-in">
+    <Transition name="fade" mode="out-in">
       <div
         v-if="show"
         :class="`fixed left-0 top-0 z-[100] flex h-screen w-screen items-center justify-center px-8 transition-all duration-300`"
@@ -20,7 +20,7 @@
           <slot></slot>
         </div>
       </div>
-    </transition>
+    </Transition>
   </teleport>
 </template>
 

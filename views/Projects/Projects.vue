@@ -6,7 +6,7 @@
     <section class="relative order-2 w-full md:order-1 md:w-1/2">
       <div class="relative hidden min-h-[380px] md:flex">
         <div class="relative flex flex-col items-start justify-between gap-4">
-          <transition name="slide-fade" mode="out-in">
+          <Transition name="page" mode="out-in">
             <div :key="detail?.title">
               <h1 class="text-2xl sm:text-3xl xl:text-4xl">
                 <strong>{{ detail?.title }}</strong>
@@ -15,7 +15,7 @@
                 {{ detail?.description }}
               </p>
             </div>
-          </transition>
+          </Transition>
 
           <button
             class="text-nowrap border-b-2 border-slate-900 px-4 text-lg dark:border-white"

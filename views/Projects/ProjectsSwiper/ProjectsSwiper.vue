@@ -6,6 +6,7 @@
     :lazy="true"
     :pagination="pagination"
     class="image-swiper order-1 md:order-2"
+    :speed="1000"
     :breakpoints="{
       '768': {
         slidesPerView: 'auto'
