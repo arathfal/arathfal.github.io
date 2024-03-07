@@ -2,7 +2,11 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/color-mode'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/color-mode', 'nuxt-delay-hydration'],
+  delayHydration: {
+    mode: 'init',
+    debug: process.env.NODE_ENV === 'development'
+  },
   colorMode: {
     classSuffix: ''
   },

@@ -1,5 +1,5 @@
 <template>
-  <AppHeader />
+  <LazyAppHeader />
   <NuxtPage />
-  <AppFooter />
+  <LazyAppFooter />
 </template>

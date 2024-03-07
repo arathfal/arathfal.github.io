@@ -1,5 +1,5 @@
 <template>
-  <header class="relative flex w-full items-center gap-5 px-5 py-5 sm:px-8">
+  <header class="relative flex w-full items-center px-5 py-5 sm:px-8">
     <div
       v-if="isShowMenu"
       class="absolute left-0 top-0 z-[50] h-screen w-screen bg-transparent sm:hidden"
@@ -9,7 +9,7 @@
       </button>
     </div>
 
-    <div class="flex w-full items-center gap-3 sm:w-auto">
+    <div class="flex w-full items-center gap-3 border-gray-400 sm:w-auto sm:border-r sm:pr-5">
       <figure class="inline-flex size-10 items-center justify-center rounded-full bg-white">
         <img src="@/assets/images/Black Logo.png" class="size-6" alt="Logo" />
       </figure>
@@ -24,7 +24,7 @@
       :class="`nav-container ${isShowMenu ? 'translate-x-0 opacity-100' : 'translate-x-60 opacity-0'}`"
     >
       <nav
-        class="order-2 flex flex-col gap-4 border-gray-400 sm:order-1 sm:flex-row sm:items-center sm:border-l sm:px-5"
+        class="order-2 flex flex-col gap-4 border-gray-400 sm:order-1 sm:flex-row sm:items-center sm:px-5"
       >
         <NuxtLink class="px-2 py-1 text-center" :to="paths.ABOUT" @click="onClickRoute"
           >About</NuxtLink
